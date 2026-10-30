@@ -5,7 +5,7 @@
 >
 > 本项目用于探索 AI 辅助求职流程，请遵守招聘平台的使用规则。本项目与 BOSS 直聘无官方关联。
 >
-> 本项目采用 [PolyForm Noncommercial 1.0.0](LICENSE)，并提供[个人求职补充授权](LICENSE-NOTICE.md#个人求职补充授权)。
+> 本项目采用 [PolyForm Noncommercial 1.0.0](LICENSE)，并提供[个人求职补充授权](NOTICE.md#个人求职补充授权)。
 
 ## 🎯 项目介绍
 
