@@ -8,9 +8,9 @@ using System.Windows.Forms;
 [assembly: AssemblyTitle("boss-jobmate")]
 [assembly: AssemblyProduct("boss-jobmate")]
 [assembly: AssemblyDescription("boss-jobmate portable launcher")]
-[assembly: AssemblyVersion("0.5.1.128")]
-[assembly: AssemblyFileVersion("0.5.1.128")]
-[assembly: AssemblyInformationalVersion("0.5.1")]
+[assembly: AssemblyVersion("0.5.2.128")]
+[assembly: AssemblyFileVersion("0.5.2.128")]
+[assembly: AssemblyInformationalVersion("0.5.2")]
 
 internal static class Launcher
 {
