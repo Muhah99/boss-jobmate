@@ -31,20 +31,22 @@
 
 ## 📥 下载
 
-**版本：v0.5.1 · Windows x64**
+**版本：v0.5.2 · Windows x64**
 
-本版整理客户源码与构建步骤，更新随包说明；继续支持准备投递、审阅消息及确认后发送。
+本版缩短安装包内目录，改善 Windows 深目录解压兼容性；求职业务功能保持不变。
 
 | 安装包 | 适用情况 | 下载 |
 | --- | --- | --- |
-| 含浏览器版（推荐） | 自带 Chromium，适合首次使用 | [下载含浏览器版](https://github.com/Muhah99/boss-jobmate/releases/download/v0.5.1/boss-jobmate-v0.5.1-with-chromium.zip) |
-| 不含浏览器版 | 已安装 Chrome，下载体积更小 | [下载不含浏览器版](https://github.com/Muhah99/boss-jobmate/releases/download/v0.5.1/boss-jobmate-v0.5.1-without-chromium.zip) |
+| 含浏览器版（推荐） | 自带 Chromium，适合首次使用 | [下载含浏览器版](https://github.com/Muhah99/boss-jobmate/releases/download/v0.5.2/boss-jobmate-v0.5.2-with-chromium.zip) |
+| 不含浏览器版 | 已安装 Chrome，下载体积更小 | [下载不含浏览器版](https://github.com/Muhah99/boss-jobmate/releases/download/v0.5.2/boss-jobmate-v0.5.2-without-chromium.zip) |
 
-选择一个版本，完整解压到新的可写目录后运行 `boss-jobmate.exe`，按初始化引导完成配置。请先停止旧安装并备份其 `data/`，不要直接覆盖正在运行的目录。
+选择一个版本，完整解压到新的可写目录；含浏览器版进入 `BJC`、不含版进入 `BJM`，再运行其中的 `boss-jobmate.exe`，按初始化引导完成配置。请先停止旧安装并备份其 `data/`，不要直接覆盖正在运行的目录。
+
+建议使用较短的解压路径，完整保留包内文件；本版不保证任意深目录都能解压。
 
 含浏览器版附带 Chromium 158.0.8111.0 开发快照；不含浏览器版的 BOSS 操作使用本机已安装的 Chrome。两包使用同一套应用。
 
-[版本说明](https://github.com/Muhah99/boss-jobmate/releases/tag/v0.5.1) · [历史版本](https://github.com/Muhah99/boss-jobmate/releases) · [完整使用说明](../README.md)
+[版本说明](https://github.com/Muhah99/boss-jobmate/releases/tag/v0.5.2) · [历史版本](https://github.com/Muhah99/boss-jobmate/releases) · [完整使用说明](../README.md)
 
 ### 源码与构建
 
