@@ -31,9 +31,16 @@
 
 ## 📥 下载
 
-**[前往 Releases 下载](https://github.com/Muhah99/boss-jobmate/releases)**
+**当前版本：v0.5 · Windows x64**
 
-安装包待上传。
+| 安装包 | 适用情况 | 下载 |
+| --- | --- | --- |
+| 含浏览器版（推荐） | 自带 Chromium，适合首次使用 | [下载含浏览器版](https://github.com/Muhah99/boss-jobmate/releases/download/v0.5/boss-jobmate-v0.5-with-chromium.zip) |
+| 不含浏览器版 | 已准备好 Chrome，下载体积更小 | [下载不含浏览器版](https://github.com/Muhah99/boss-jobmate/releases/download/v0.5/boss-jobmate-v0.5-without-chromium.zip) |
+
+选择一个版本，完整解压后运行 `boss-jobmate.exe`，按初始化引导完成配置。
+
+[查看版本说明和全部下载文件](https://github.com/Muhah99/boss-jobmate/releases/tag/v0.5)
 
 ## 🖼️ 项目截图
 
