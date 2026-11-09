@@ -1,0 +1,19 @@
+{
+  "name": "boss-jobmate",
+  "version": "0.5.0",
+  "private": true,
+  "type": "module",
+  "engines": {"node": ">=24"},
+  "scripts": {
+    "start": "node runtime/web.mjs",
+    "mcp": "node runtime/mcp.mjs",
+    "build": "npm --prefix web run build",
+    "check": "node --test --test-isolation=none test-dev/*.test.mjs",
+    "package:windows": "node scripts/package-windows.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.24.1",
+    "ajv": "^8.20.0",
+    "zod": "^3.24.1"
+  }
+}
