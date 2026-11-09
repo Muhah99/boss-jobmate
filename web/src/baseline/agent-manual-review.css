@@ -1,0 +1,85 @@
+.manual-review .agent-mark-field { min-width: 0; gap: 10px; }
+.agent-mark-help, .agent-mark-empty { color: #72859a; font-size: 12px; line-height: 1.65; }
+.agent-mark-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-width: 0; }
+.agent-mark-heading label { margin: 0; }
+.agent-mark-heading label span { margin-left: 4px; color: #72859a; font-weight: 400; }
+.agent-mark-clear { flex: none; width: auto; padding: 3px 0; border: 0; background: transparent; color: #526a80; font-size: 12px; cursor: pointer; }
+.agent-mark-clear:hover:not(:disabled) { color: #008080; }
+.agent-mark-clear:disabled { opacity: .5; cursor: not-allowed; }
+.agent-mark-list { display: grid; gap: 8px; min-width: 0; }
+.agent-mark-item { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 12px; min-width: 0; padding: 10px 12px; border: 1px solid #e1e7ed; border-radius: 6px; background: #f8fafc; }
+.agent-mark-text { min-width: 0; color: #526a80; font-size: 13px; line-height: 1.7; white-space: pre-wrap; overflow-wrap: anywhere; }
+.manual-review .agent-mark-remove { min-height: 30px; height: auto; width: auto; padding: 5px 9px; font-size: 12px; white-space: nowrap; }
+.manual-review .agent-review-note { min-width: 0; }
+.agent-review-page .review-four-choices { grid-template-columns: repeat(3, minmax(0, 1fr)); flex: none; }
+.agent-review-page .agent-manual-review { display: flex; flex-direction: column; min-height: 0; }
+.agent-review-page .agent-review-reading { flex: 1; min-height: 0; overflow-y: auto; overflow-x: hidden; padding-bottom: 20px; }
+.agent-review-page .agent-manual-review > .manual-review-head { flex: none; }
+.agent-review-page .agent-review-reading .review-current-message { max-height: none; overflow: visible; white-space: pre-wrap; user-select: text; overflow-wrap: anywhere; }
+.agent-review-page .agent-review-reading .field { flex: none; }
+.agent-review-page .agent-mark-results { display: grid; gap: 10px; }
+.agent-mark-result { display: grid; grid-template-columns: 24px minmax(0, 1fr); gap: 8px; padding: 12px; border: 1px solid #e1e7ed; border-radius: 6px; }
+.agent-manual-review .agent-mark-result p, .agent-mark-replacement { margin: 0; font-size: 13px; line-height: 1.7; white-space: pre-wrap; overflow-wrap: anywhere; }
+.agent-mark-number { width: 24px; height: 24px; border-radius: 50%; background: #f0f4f8; color: #17324d; text-align: center; font-weight: 600; }
+.agent-mark-replacement { display: flex; gap: 9px; align-items: baseline; margin-top: 8px; }
+.agent-mark-replacement .deleted { background: #fff0f0; color: #c53f3f; padding: 2px 9px; border-radius: 4px; }
+.agent-mark-replacement .rewritten { background: #eaf8f5; color: #167c78; padding: 3px 9px; border-radius: 4px; }
+.agent-manual-review .agent-result-status { padding: 4px 16px; font-size: 12px; }
+.agent-progress-chip { display: inline-flex; gap: 6px; align-items: center; border: 0; border-radius: 6px; padding: 6px 9px; font-size: 12px; font-weight: 600; white-space: nowrap; }
+.agent-review-page .agent-progress-chip.waiting { background: #fff4e6; color: #b65a19; }
+.agent-review-page .agent-progress-chip.running { background: #edf3ff; color: #366add; }
+.agent-review-page .agent-progress-chip.completed { background: #e6f7f3; color: #168576; }
+.agent-review-page .agent-progress-chip.failed { background: #fff0f0; color: #ce4141; }
+.agent-review-page .review-footer .agent-progress-summary { display: flex; flex-direction: row; gap: 8px; position: relative; flex-wrap: wrap; justify-content: center; }
+.agent-progress-popover { position: absolute; bottom: calc(100% + 18px); left: 50%; transform: translateX(-50%); width: min(590px, 90vw); max-height: 50vh; overflow: auto; background: white; border: 1px solid #dbe3eb; border-radius: 8px; padding: 14px; box-shadow: 0 8px 30px #17324d22; }
+.agent-progress-popover > div, .agent-progress-popover article { display: flex; align-items: center; gap: 12px; justify-content: space-between; }
+.agent-progress-popover article { padding: 12px 0; border-top: 1px solid #e8edf2; margin-top: 10px; }
+.agent-progress-popover article > div { flex: 1; min-width: 0; }
+.agent-progress-popover small { display: block; color: #72859a; margin-top: 5px; }
+.agent-progress-popover p { white-space: pre-wrap; overflow-wrap: anywhere; font-size: 12px; }
+.agent-progress-popover button { border: 0; background: transparent; color: #247ab7; white-space: nowrap; }
+.agent-integration { margin: 12px 24px 0; padding: 15px 18px; border: 1px solid #dce5eb; border-radius: 8px; background: #fff; flex: none; }
+.agent-integration-heading { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 13px; color: #72859a; }
+.agent-integration-heading strong { color: #17324d; font-size: 16px; }
+.agent-integration-body { max-height: 100px; overflow: auto; white-space: pre-wrap; overflow-wrap: anywhere; margin-top: 10px; color: #526a80; font-size: 13px; line-height: 1.7; }
+.agent-integration.failed { border-color: #f5c7c4; }
+.agent-integration-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 12px; }
+.agent-integration-actions small { color: #72859a; }
+.agent-review-warning { padding: 9px 24px; background: #fff6e9; color: #ad5716; font-size: 12px; line-height: 1.6; flex: none; overflow-wrap: anywhere; }
+.agent-generation-block { margin: 0; flex-basis: 100%; color: #ad5716; font-size: 12px; line-height: 1.5; }
+.job-task-footer:has(.agent-generation-block) { height: auto; min-height: 100px; flex-wrap: wrap; gap: 8px; padding-top: 10px; padding-bottom: 10px; }
+.agent-review-page .job-list-status { flex-wrap: wrap; }
+.agent-review-page .job-feedback-status { margin: 10px 14px; }
+.agent-review-page .job-feedback-status button { margin-right: 8px; }
+@media (min-width: 1001px) {
+  .agent-review-page { height: 100dvh; min-height: 0; display: flex; flex-direction: column; overflow: hidden; }
+  .agent-review-page > .app-header, .agent-review-page > .batch-bar, .agent-review-page > .review-footer { flex: none; }
+  .agent-review-page .review-workspace { flex: 1; height: auto; min-height: 0; grid-template-rows: minmax(0, 1fr); padding: 16px 24px; }
+  .agent-review-page .review-detail { display: flex; flex-direction: column; min-height: 0; overflow: hidden; }
+  .agent-review-page .review-main-columns { flex: 1; min-height: 0; grid-template-rows: minmax(0, 1fr); }
+  .agent-review-page .job-description { min-height: 0; }
+  .agent-review-page .job-description p { min-height: 0; overflow: auto; }
+  .agent-review-page .review-footer { position: relative; min-height: 85px; height: auto; padding-top: 12px; padding-bottom: 12px; gap: 12px; }
+  .agent-review-page .review-footer-actions { min-width: 0; }
+  .agent-review-page .review-footer-actions .primary-button { min-width: 0; }
+  .agent-review-page .empty-state { min-height: 0; flex: 1; padding: 30px; }
+}
+@media (max-width: 1000px) {
+  .agent-review-page .agent-review-reading { max-height: 65vh; }
+  .agent-review-page .review-footer { height: auto; flex-wrap: wrap; gap: 12px; padding: 12px; }
+  .agent-review-page .review-footer .agent-progress-summary { width: 100%; }
+  .agent-review-page .review-footer-actions { flex-wrap: wrap; min-width: 0; }
+  .agent-review-page .review-footer-actions .primary-button { min-width: 0; }
+}
+/* 矮窗口和窄窗口允许页面容纳顶部状态，阅读区不再被固定首屏高度挤尽。 */
+@media (max-height: 850px), (max-width: 1000px) {
+  .agent-review-page { height: auto; min-height: 100dvh; overflow: visible; }
+  .agent-review-page .review-workspace { flex: none; height: auto; min-height: 0; grid-template-rows: auto; }
+  .agent-review-page .review-detail { overflow: visible; }
+  .agent-review-page .review-main-columns { flex: none; grid-template-rows: auto; }
+  .agent-review-page .agent-manual-review { height: auto; overflow: hidden; }
+  .agent-review-page .agent-review-reading { flex: none; height: 55dvh; max-height: none; min-height: 260px; }
+  .agent-review-page .job-description p { max-height: 55dvh; }
+  .agent-review-page .job-list { height: auto; max-height: 75dvh; }
+  .agent-review-page .review-footer { position: sticky; bottom: 0; }
+}
