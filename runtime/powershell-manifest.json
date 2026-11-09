@@ -1,0 +1,15 @@
+{
+  "version": "7.6.9",
+  "target": "win-x64",
+  "release": "https://github.com/PowerShell/PowerShell/releases/tag/v7.6.9",
+  "download": "https://github.com/PowerShell/PowerShell/releases/download/v7.6.9/PowerShell-7.6.9-win-x64.zip",
+  "prepared_at": "2026-10-28T05:58:48.455325+00:00",
+  "zip_bytes": 109620855,
+  "distribution": "Official self-contained ZIP retained intact; no global installation/PATH/policy changes",
+  "license_files": [
+    "LICENSE.txt",
+    "ThirdPartyNotices.txt"
+  ],
+  "files": 658,
+  "support": "PowerShell7.6 LTS on supported Windows x64 desktop; actual product/native validation pending. Not a universal Windows claim."
+}
