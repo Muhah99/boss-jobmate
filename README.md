@@ -31,16 +31,21 @@
 
 ## 📥 下载
 
-**当前版本：v0.5 · Windows x64**
+**当前版本：v0.5 · 投递文案更新 · Windows x64**
+
+产品版本 0.5.0，发行修订 `CUSTOMER-DELIVERY-WORDING-dev2-20261109`。本次统一“准备投递”“投递安排”等用语，区分审阅与实际发送。
 
 | 安装包 | 适用情况 | 下载 |
 | --- | --- | --- |
-| 含浏览器版（推荐） | 自带 Chromium，适合首次使用 | [下载含浏览器版](https://github.com/Muhah99/boss-jobmate/releases/download/v0.5/boss-jobmate-v0.5-with-chromium.zip) |
-| 不含浏览器版 | 已准备好 Chrome，下载体积更小 | [下载不含浏览器版](https://github.com/Muhah99/boss-jobmate/releases/download/v0.5/boss-jobmate-v0.5-without-chromium.zip) |
+| 含浏览器版（推荐） | 自带 Chromium，适合首次使用 | [下载含浏览器版](https://github.com/Muhah99/boss-jobmate/releases/download/v0.5-delivery-wording-dev2/boss-jobmate-v0.5-delivery-wording-dev2-with-chromium.zip) |
+| 不含浏览器版 | 已准备好 Chrome，下载体积更小 | [下载不含浏览器版](https://github.com/Muhah99/boss-jobmate/releases/download/v0.5-delivery-wording-dev2/boss-jobmate-v0.5-delivery-wording-dev2-without-chromium.zip) |
 
-选择一个版本，完整解压后运行 `boss-jobmate.exe`，按初始化引导完成配置。
+选择一个版本，完整解压到新目录后运行 `boss-jobmate.exe`，按初始化引导完成配置。请保留旧安装的数据备份。
 
-[查看版本说明和全部下载文件](https://github.com/Muhah99/boss-jobmate/releases/tag/v0.5)
+[查看本次版本说明](https://github.com/Muhah99/boss-jobmate/releases/tag/v0.5-delivery-wording-dev2) · [历史版本](https://github.com/Muhah99/boss-jobmate/releases)
+
+> [!NOTE]
+> 源码目录与构建材料正在整理，尚未完成完整源码发布。Releases 中自动生成的 `Source code` 是仓库快照；使用软件请下载上方安装包。
 
 ## 🖼️ 项目截图
 
