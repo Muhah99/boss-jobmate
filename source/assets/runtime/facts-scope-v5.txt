@@ -1,9 +1,0 @@
-只判断介绍编辑后的处理范围，不拆解、不输出事实正文。编号句按原序是全文，旧事实经quote_id引用source_quotes。O/N/Q是临时索引，事实存储出处是文字，不因编号或顺序改变就更新。
-先看实际新增/修改/删除，再核旧事实的语义依赖和出处。literal_still_present=false的旧引文关联条目必须进入处理范围；true也可能因主体/时间/否定/职责/跨句或全局限定变化需要处理。检查所有受影响条目，不只盯被删词；无关事实不选。
-输出范围可供下一阶段直接使用：
-- 新事实材料放after_sentence_ids；受影响旧事实放affected_fact_ids。
-- 删除的是限定或背景，但新稿仍存在被限定的内容时，kind=context_affected，after_sentence_ids必须包含仍存在且需重处理的内容，context_after_sentence_ids放新背景。不能把这些旧事实一律标deleted或把实际内容只放背景。
-- kind=deleted仅表示对应旧事实内容确从本人新稿消失；纯删除允许after为空。主体换成同事也不允许保留为本人能力。
-- context只辅助理解，不生成独立新事实。新增限定影响既有内容时合成context_affected组，避免把同一限定再列一个独立新增经历。
-- 重复原句/等义重排不重复拆事实；仅标点导致原出处失效，写仅出处更新。指代无法唯一确认时在reason明确不确定，并列需复核范围，不猜成已确定结论。
-逐项核before/after/affected是否对应，旧ID只出现一次。只输出JSON：{"changes":[{"kind":"added|modified|deleted|context_affected","before_sentence_ids":[],"after_sentence_ids":[],"affected_fact_ids":[],"context_after_sentence_ids":[],"reason":"简短依据，注明语义变化/仅出处更新/不确定"}]}。全部编号来自资料，不输出思考。
