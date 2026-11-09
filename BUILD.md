@@ -1,4 +1,4 @@
-# 从源码构建 Boss Jobmate 职伴 v0.5.1
+# 从源码构建 Boss Jobmate 职伴 v0.5.2
 
 普通用户请使用 [Releases](https://github.com/Muhah99/boss-jobmate/releases) 中的 Windows 便携包。本文面向需要修改程序和自行构建的开发者。
 
@@ -24,7 +24,7 @@
 
 具体固定来源记录于 [distribution.json](runtime/distribution.json)、[powershell-manifest.json](runtime/powershell-manifest.json) 和 [python-manifest.json](runtime/python-manifest.json)。保留所有组件随附许可。
 
-以下命令在源码根目录执行，按实际构建步骤整理。独立验收复用了已从官方取得的 npm 缓存和固定运行组件下载件，未重复下载全部大组件；具体范围见文末。
+以下命令沿用 v0.5.1 已验证的构建输入与步骤，版本号更新为 v0.5.2。v0.5.2 的定向验证重点是压缩脚本、双包解压及隔离启动，没有重新执行 v0.5.1 全部从源准备验证；具体范围见文末。
 
 ## 1. 安装应用依赖并构建前端
 
@@ -36,7 +36,7 @@ npm.cmd --prefix web ci --no-audit --no-fund
 npm.cmd run build
 ```
 
-开发记录中，两份锁文件分别安装 93 和 66 个包，Vite 7.3.7 构建了 1653 个模块，产物位于 web/dist/。此次 npm 提示 esbuild 的 postinstall 尚待策略许可，但实际前端构建通过锁文件安装的 Windows x64 可选二进制完成。
+v0.5.1 开发记录中，两份锁文件分别安装 93 和 66 个包，Vite 7.3.7 构建了 1653 个模块，产物位于 web/dist/。此次 npm 提示 esbuild 的 postinstall 尚待策略许可，但实际前端构建通过锁文件安装的 Windows x64 可选二进制完成。
 
 ## 2. 准备随包运行组件
 
@@ -78,21 +78,21 @@ $compiler = Join-Path $env:WINDIR 'Microsoft.NET/Framework64/v4.0.30319/csc.exe'
 & $compiler /nologo /target:winexe /platform:x64 /optimize+ /reference:System.Windows.Forms.dll "/win32icon:$root\build\boss-jobmate.ico" "/out:$root\boss-jobmate.exe" "$root\scripts\Launcher.cs"
 ```
 
-该命令使用绝对路径。开发构建生成的 EXE 产品版本为 0.5.1，文件及程序集版本为 0.5.1.128。
+该命令使用绝对路径。开发构建生成的 EXE 产品版本为 0.5.2，文件及程序集版本为 0.5.2.128。
 
 ## 4. 先组装不含浏览器版
 
 此时源码工作目录中应没有 runtime/browser/。在与源码并列的全新输出目录组包，不使用已经运行并带有个人数据的安装目录作为输入。
 
 ```powershell
-$output = Join-Path (Split-Path $root -Parent) 'boss-jobmate-build-v0.5.1'
+$output = Join-Path (Split-Path $root -Parent) 'boss-jobmate-build-v0.5.2'
 New-Item -ItemType Directory -Path $output | Out-Null
-$without = Join-Path $output 'boss-jobmate-v0.5.1-without-chromium'
+$without = Join-Path $output 'boss-jobmate-v0.5.2-without-chromium'
 & "$root/runtime/node/node.exe" "$root/scripts/package-windows.mjs" --directory-only --output $without
 & "$root/runtime/powershell/pwsh.exe" -NoProfile -STA -ExecutionPolicy Bypass -File "$root/scripts/zip-package.ps1" -PackagePath $without -ZipPath "$without.zip"
 ```
 
-打包脚本复制应用、依赖、运行组件和根 README，排除 runtime/packages/ 下载缓存，不复制 data/。输出目录必须尚不存在。命令中的 Bypass 仅作用于该 PowerShell 进程。
+打包脚本复制应用、依赖、运行组件和根 README，排除 runtime/packages/ 下载缓存，不复制 data/。压缩脚本根据包内是否存在 runtime/browser/chrome.exe，将 ZIP 内顶层目录设为含版 BJC/ 或不含版 BJM/，不取组装目录的长名称；ZIP 文件名仍包含版本号。输出目录必须尚不存在。命令中的 Bypass 仅作用于该 PowerShell 进程。
 
 ## 5. 可选：准备 Chromium 并组装含浏览器版
 
@@ -110,7 +110,7 @@ $without = Join-Path $output 'boss-jobmate-v0.5.1-without-chromium'
 浏览器准备完毕后，执行：
 
 ```powershell
-$with = Join-Path $output 'boss-jobmate-v0.5.1-with-chromium'
+$with = Join-Path $output 'boss-jobmate-v0.5.2-with-chromium'
 & "$root/runtime/node/node.exe" "$root/scripts/package-windows.mjs" --directory-only --output $with
 & "$root/runtime/powershell/pwsh.exe" -NoProfile -STA -ExecutionPolicy Bypass -File "$root/scripts/zip-package.ps1" -PackagePath $with -ZipPath "$with.zip"
 ```
@@ -119,12 +119,12 @@ $with = Join-Path $output 'boss-jobmate-v0.5.1-with-chromium'
 
 ## 验证范围
 
-公开源码及双包共 42 项独立发行检查通过。独立空目录按两份原锁文件安装依赖，重新构建前端和 Launcher，执行 Node 许可与 Python 准备、原不含浏览器版组包及压缩。独立验证复用开发从官方 registry 取得的 npm 缓存，以及固定 Node、PowerShell、Python 和 pypdf 下载件；Node 许可脚本实际从官方 tag 下载。
+v0.5.2 保留 v0.5.1 的 137 个维护文件路径，127 个文件逐字不变；10 个更新涉及压缩脚本、版本和发行说明。依赖、SDK 示例、PowerShell 资源、第三方许可及前端产物保持原字节。两个 ZIP 分别包含 4,913（含浏览器）和 4,197（不含浏览器）个文件；共用内容一致。
 
-重建前端产物与正式包逐字一致。不含版重建组包与正式包的差异限于重编 Launcher 及两份生成清单；清单除发行时间外按字段一致，不承诺可重复生成字节完全相同的 EXE 或 ZIP。
+独立验收使用 Windows PowerShell 5.1 的 Expand-Archive，在全新的 65 和 125 字符父目录分别完整解压两规格，共四次；解压文件与实际 ZIP 逐文件、逐字节一致。125 字符父目录下，最长文件路径为 258，最长目录为 216；两规格最长包内文件路径均为 132。
 
-两份正式 ZIP 均重新解压并与各自正式目录逐文件核对；含版另核 256 个 Chromium 文件与固定官方归档、460 份许可／来源文件与旧发行包一致。独立复跑组包和压缩的是不含版，含版依实际成品及固定输入核验。
+两个深目录隔离副本通过原 start、首页及初始化页、静态资源、空白 state、HTTP／MCP 0.5.2 和原 stop 核验，测试进程与监听均已结束。正式 ZIP 与已验件逐字节一致，正式解压根无 data/，正式 EXE 未运行。
 
-从不含浏览器版实际 ZIP 另解副本，通过原 start、HTTP／MCP 版本 0.5.1、空白初始化状态及原 stop 检查；测试进程和监听已结束。两正式解压根没有运行且不含 data/。
+运行组件准备与从源码构建基础沿用 v0.5.1 的独立证据：双锁安装、前端与 Launcher 编译、Node 许可与 Python 准备、不含版组包均已验证。该轮复用了官方 npm 缓存和固定下载件，未重复下载全部大组件；本轮不将历史验证说成重新执行。
 
-本轮未验证含浏览器版启动、原生窗口、浏览器交互、实际求职业务或跨电脑运行。公开源码不附内部开发测试套件；已移除引用缺失套件的 npm run check，不能将不存在的测试入口当作验收方法。
+Explorer 实屏、外部用户电脑、其他路径长度、浏览器交互和真实业务未验。缩短包内目录改善兼容性，不保证任意深目录都可解压。公开源码不附内部开发测试套件。

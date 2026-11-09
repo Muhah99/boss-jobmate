@@ -1,6 +1,6 @@
 {
   "project": "boss-jobmate",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "node": "24.19.0",
   "python": {
     "pypdf_url": "https://files.pythonhosted.org/packages/3c/2c/c43c03eaf630435f023f1dc61ec4a4a78951ad5530a62c71cc89bde307b7/pypdf-6.19.0-py3-none-any.whl",
@@ -13,10 +13,10 @@
     ],
     "python_version": "3.13.7"
   },
-  "created_at": "2026-11-09T09:19:50.047308+00:00",
+  "created_at": "2026-11-09T14:59:35.475661+00:00",
   "data": "empty-on-first-run",
-  "release": "CUSTOMER-PUBLIC-SOURCE-dev1-20261109",
-  "launcher": "Node-first-icon1-0.5.1.128",
+  "release": "PACKAGE-EXTRACT-PATH-TOO-LONG-dev1-20261109",
+  "launcher": "Node-first-icon1-0.5.2.128",
   "browser": {
     "optional": true,
     "product": "Chromium",

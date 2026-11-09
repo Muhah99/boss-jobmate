@@ -41,7 +41,7 @@ export async function startWeb({application,port=0,host='127.0.0.1',recordPid=tr
   }catch(error){if(recordPid)await recordDiagnostic(root,{component:'runtime',operation:'web.start',phase:'start.bind',outcome:'error',pid:process.pid,port,error_code:diagnosticCode(error)});throw error;}
   port=server.address().port;
   try {application ??= bootstrap({port});}catch(error){server.close();if(recordPid)await recordDiagnostic(root,{component:'runtime',operation:'web.start',phase:'start.bootstrap',outcome:'error',pid:process.pid,port,error_code:diagnosticCode(error)});throw error;}
-  const mcp=createServer(application),client=new Client({name:'boss-jobmate-web',version:'0.5.1'});
+  const mcp=createServer(application),client=new Client({name:'boss-jobmate-web',version:'0.5.2'});
   const [clientTransport,serverTransport]=InMemoryTransport.createLinkedPair();
   try{await mcp.connect(serverTransport);await client.connect(clientTransport);}catch(error){if(recordPid)await recordDiagnostic(root,{component:'runtime',operation:'web.start',phase:'start.mcp',outcome:'error',pid:process.pid,port,error_code:diagnosticCode(error)});throw error;}
   const usage=createDailyUsage({store:application.store,root:application.profile?.root||root,fetchImpl:usageFetch});
@@ -49,7 +49,7 @@ export async function startWeb({application,port=0,host='127.0.0.1',recordPid=tr
   let assets=resolve(root,'web','dist');try{await stat(resolve(assets,'index.html'));}catch{assets=resolve(assets,'client');}
   const mime={'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.svg':'image/svg+xml','.png':'image/png','.ico':'image/x-icon'};
   handler=async(req,res)=>{
-    if(req.url==='/api/runtime'){res.setHeader('Content-Type','application/json; charset=utf-8');res.end(JSON.stringify({ok:true,name:'boss-jobmate',version:'0.5.1',root,entry:fileURLToPath(import.meta.url),pid:process.pid,port,powershell}));return;}
+    if(req.url==='/api/runtime'){res.setHeader('Content-Type','application/json; charset=utf-8');res.end(JSON.stringify({ok:true,name:'boss-jobmate',version:'0.5.2',root,entry:fileURLToPath(import.meta.url),pid:process.pid,port,powershell}));return;}
     if(await api(req,res))return;
     try {
       const pathname=decodeURIComponent(new URL(req.url,'http://localhost').pathname);let file=resolve(assets,'.'+pathname);const rel=relative(assets,file);
@@ -59,13 +59,13 @@ export async function startWeb({application,port=0,host='127.0.0.1',recordPid=tr
     } catch {res.statusCode=404;res.end('页面尚未构建，请在 boss-jobmate 执行 npm run build');}
   };
   if(recordPid){try{await mkdir(resolve(root,'data','run'),{recursive:true});await writeFile(resolve(root,'data','run','web.json'),JSON.stringify({pid:process.pid,root,entry:fileURLToPath(import.meta.url),port:server.address().port,powershell}));}catch(error){await recordDiagnostic(root,{component:'runtime',operation:'web.start',phase:'start.record',outcome:'error',pid:process.pid,port,error_code:diagnosticCode(error)});throw error;}}
-  if(recordPid){let asset=null;try{asset=(await readFile(resolve(assets,'index.html'),'utf8')).match(/\/assets\/(index-[A-Za-z0-9_-]+\.js)/)?.[1]||null;}catch{}await recordDiagnostic(root,{component:'runtime',operation:'web.start',phase:'complete',outcome:'success',pid:process.pid,port:server.address().port,version:'0.5.1',node:process.version,asset});}
+  if(recordPid){let asset=null;try{asset=(await readFile(resolve(assets,'index.html'),'utf8')).match(/\/assets\/(index-[A-Za-z0-9_-]+\.js)/)?.[1]||null;}catch{}await recordDiagnostic(root,{component:'runtime',operation:'web.start',phase:'complete',outcome:'success',pid:process.pid,port:server.address().port,version:'0.5.2',node:process.version,asset});}
   ready=true;
   const close=async(reason='api_close')=>{usage.close();try{await new Promise(done=>server.close(done));await client.close();await mcp.close();application.close();if(recordPid)await recordDiagnostic(root,{component:'runtime',operation:'web.stop',outcome:'closed',pid:process.pid,reason:['api_close','SIGINT','SIGTERM'].includes(reason)?reason:'unknown'});}finally{if(installationLock)await new Promise(done=>installationLock.close(done));}};
   return {server,client,application,close,address:`http://${host}:${server.address().port}/`};
   }catch(error){server.close();if(installationLock)await new Promise(done=>installationLock.close(done));throw error;}
 }
 if(process.argv[1] && resolve(process.argv[1])===fileURLToPath(import.meta.url)) {
-  const app=await startWeb();console.log(`boss-jobmate v0.5.1 ${app.address}`);
+  const app=await startWeb();console.log(`boss-jobmate v0.5.2 ${app.address}`);
   for(const signal of ['SIGINT','SIGTERM'])process.once(signal,()=>{void app.close(signal).finally(()=>process.exit(0));});
 }
