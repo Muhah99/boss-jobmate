@@ -1,0 +1,17 @@
+Boss Jobmate 职伴 · 许可及第三方说明
+
+项目许可及个人求职补充授权见解压根目录的 LICENSE 和 NOTICE.md。两种 Windows 包均带有各自运行组件的许可证，Node.js 与 Python/pypdf 许可证位于 runtime/licenses/，PowerShell 许可证与第三方声明位于 runtime/powershell/。
+
+下列 Chromium 信息适用于含浏览器版。该版附带 Chromium 158.0.8111.0、Windows x64 官方开发快照 1721610。完整版权、源码和构建入口见同目录 README.md 的「Chromium 版本、版权与对应源码」一节。
+
+必要官方入口：
+固定浏览器下载：https://commondatastorage.googleapis.com/chromium-browser-snapshots/Win_x64/1721610/chrome-win.zip
+固定源码：https://chromium.googlesource.com/chromium/src/+/74eb2202cbe994c6ab816eed1874954d0d84ed5b/
+依赖版本：https://chromium.googlesource.com/chromium/src/+/74eb2202cbe994c6ab816eed1874954d0d84ed5b/DEPS
+官方构建说明：https://chromium.googlesource.com/chromium/src/+/74eb2202cbe994c6ab816eed1874954d0d84ed5b/docs/windows_build_instructions.md
+
+离线版权和许可：runtime/browser/LICENSE、runtime/browser/licenses/THIRD_PARTY_NOTICES.txt（另有HTML）、runtime/browser/licenses/licenses/下451份正文及runtime/browser/licenses/COMPONENTS.csv的801条组件来源。
+对应源码和文件级适用范围：runtime/browser/licenses/SOURCE-ACCESS.md、runtime/browser/licenses/SOURCE-REQUIREMENTS.csv。
+Microsoft SDK原始许可与再分发清单：runtime/browser/licenses/microsoft/；对应可读全文：runtime/browser/licenses/licenses/L0451.txt。D3DCompiler_47.dll仅按附带Microsoft条款允许的Windows应用范围使用和再分发。
+
+各组件保留其版权、许可、免责和接收者权利，应用说明不替换或限制第三方原许可。本包不附完整Chromium源码，不要求普通用户自行编译，不作多年书面源码提供承诺。
