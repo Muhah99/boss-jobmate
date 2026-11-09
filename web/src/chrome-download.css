@@ -1,0 +1,6 @@
+.jobmate-dialog.r35-download-dialog{width:min(440px,100%)}
+.r35-download-dialog .jobmate-dialog-body{font-size:14px;line-height:1.75;padding:20px 24px}
+.r35-download-dialog .jobmate-dialog-body p{margin:0}
+.jobmate-dialog.r35-download-dialog>header,.jobmate-dialog.r35-download-dialog>footer{padding:16px 24px}
+.r35-download-dialog button:focus-visible{outline:2px solid #0f766e;outline-offset:3px}
+.r35-detect-error{color:#b42318!important}

@@ -1,0 +1,7 @@
+.jobmate-dialog.ar-confirm-dialog{width:min(480px,100%)}
+.ar-confirm-dialog:focus{outline:none}
+.ar-confirm-dialog .jobmate-dialog-body>.ip-inline-progress{margin:0}
+.ar-confirm-dialog>footer{min-height:72px}
+.ar-confirm-dialog .ip-inline-main{align-items:flex-start}
+.ar-confirm-dialog .ip-inline-main>.agent-action-spinner{margin-top:3px;flex:none}
+.ar-confirm-dialog .ar-completion-error{white-space:pre-wrap;overflow-wrap:anywhere}

@@ -1,0 +1,31 @@
+.r21-init-flow{max-width:1180px}.r21-init-flow>.setup-section{width:100%;margin-bottom:18px}.r21-preparation-row{display:flex;align-items:center;gap:16px;flex-wrap:wrap}.r21-preparation-row>div{flex:1}.r21-preparation-row p{margin:5px 0;color:#667085}.r21-init-flow .setup-steps{display:flex;gap:8px;flex-wrap:wrap}.r21-init-flow .setup-steps>div{flex:1;min-width:145px}.r21-commute-explanation{font-size:12px;line-height:1.7;color:#667085}.r21-commute-explanation p{margin:6px 0}.setup-highlight-editor{border:1px solid #cbd5e1;border-radius:8px;background:#f4f8fa;overflow:hidden}.setup-highlight-editor .setup-highlight-backdrop{background:#f4f8fa}.config-page .setup-content>.setup-section{margin-bottom:18px}
+.setup-init-wrap.r21-init-flow{max-width:1080px}
+.setup-init-wrap.r21-init-flow:has(.r17-editor-grid){max-width:1100px}
+.r21-init-flow>.setup-section{margin-bottom:0}
+.r21-init-flow{display:grid;gap:18px}
+.r21-init-flow .setup-init-heading{margin:0 0 20px}
+.r21-status-row,.r21-read-row{display:flex;align-items:center;justify-content:space-between;gap:18px}
+.r21-status-row strong,.r21-read-row strong{font-size:13px;color:#344054}
+.r21-status-row p,.r21-read-row p{font-size:11px;line-height:1.8;color:#667085;margin:6px 0}
+.r21-prep-reminder{padding:14px 16px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:6px}
+.r21-prep-reminder strong{font-size:13px;color:#344054}
+.r21-prep-reminder p{margin:6px 0 0;font-size:12px;line-height:1.8;color:#667085}
+.r21-boss-actions{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.r21-boss-actions button,.r21-read-row button{flex:none}
+.r21-read-row{border-top:1px solid #e5e7eb;padding-top:18px;gap:20px}
+.r21-read-row button{height:38px;font-size:12px}
+.setup-page .setting-toggle-label{display:flex;align-items:center;gap:10px;white-space:nowrap;font-size:11px;color:#667085}
+.config-page .setup-content>.setup-section{margin-bottom:0}
+.r21-commute-explanation{font-size:11px;line-height:1.8}
+.setup-highlight-editor,.setup-highlight-editor .setup-highlight-backdrop{background:#f8fafc}
+.setup-highlight-editor:focus-within{border-color:#0f766e;box-shadow:0 0 0 2px #0f766e18}
+
+.setup-origin-settings .setup-expectation-head .commute-expectation-identity{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}.setup-origin-settings .setup-expectation-head .commute-expectation-city{font-size:14px;font-weight:700;line-height:1.5;color:#344054}.setup-origin-settings .setup-expectation-head .commute-expectation-job{font-size:12px;font-weight:500;line-height:1.5;color:#667085}.setup-origin-settings .setup-expectation-head .commute-expectation-identity>small{font-size:10px;font-weight:400;color:#7c8da0}
+
+/* Adopted initialization duration hints: display only, no timing or business changes. */
+.init-page .init-duration-hint,.ar-confirm-dialog .init-duration-hint{font-size:13px;font-weight:400;color:#667085;line-height:1.6}
+.init-duration-action{display:inline-flex;align-items:center;gap:12px}
+.ip-inline-main .init-duration-hint{display:block;margin-top:6px}
+/* Keep both initialization browser actions readable inside the compact first card. */
+.init-browser-guide-steps .boss-prep-step:first-child .boss-step-action{flex-wrap:wrap;gap:8px}
+.init-browser-guide-steps .boss-prep-step:first-child .boss-step-action button{flex-shrink:0;white-space:nowrap}

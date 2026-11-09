@@ -1,0 +1,14 @@
+.r39-rematch-dialog{width:580px;max-width:calc(100vw - 32px)}
+.r39-rematch-dialog .jobmate-dialog-body{padding:22px 24px}
+.r39-rematch-dialog .r39-rematch-count{margin:0 0 18px;font-size:15px;color:#344054}
+.r39-rematch-dialog .rematch-job-count{color:#337873}
+.r39-rematch-dialog .profile-eta-options{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:0}
+.r39-rematch-dialog .profile-eta-option{display:flex;flex-direction:column;gap:10px;padding:16px;background:#f7f9fa;border:1px solid #e1e7ea;border-radius:8px;min-width:0}
+.r39-rematch-dialog .profile-eta-heading{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.r39-rematch-dialog .profile-eta-heading strong{font-size:15px;color:#24374b}
+.r39-rematch-dialog .profile-eta-heading span{font-size:12px;color:#337873;white-space:nowrap}
+.r39-rematch-dialog .profile-eta-option p{font-size:13px;line-height:1.7;color:#344054;margin:0}
+.r39-rematch-dialog .profile-eta-option small{font-size:12px;color:#667085;line-height:1.6}
+.r39-rematch-dialog footer{padding:16px 24px}
+.profile-page .ip-inline-progress .profile-update-eta{font-size:13px;line-height:1.6;color:#667085;display:block;margin:12px 0 0}
+@media(max-width:540px){.r39-rematch-dialog .profile-eta-options{grid-template-columns:1fr}}

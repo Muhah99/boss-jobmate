@@ -1,0 +1,6 @@
+.setup-page .setup-field .supplement-highlight-note{display:block;margin:0 0 8px;color:#667085;font-size:12px;line-height:1.6;font-weight:400}
+.supplement-highlight-surface{position:relative;background:#fff;border-radius:6px;isolation:isolate}
+.supplement-highlight-surface textarea{display:block;width:100%;box-sizing:border-box}
+.supplement-highlight-backdrop{position:absolute;inset:0;box-sizing:border-box;border:1px solid transparent;border-radius:6px;padding:14px 16px;overflow:hidden;scrollbar-gutter:stable;white-space:pre-wrap;overflow-wrap:break-word;word-break:normal;font-size:14px;line-height:1.9;font-family:inherit;letter-spacing:normal;color:transparent;pointer-events:none;user-select:none}
+.supplement-highlight-backdrop mark{background:#fff0af;color:transparent;border-radius:2px}
+.setup-field .supplement-highlight-surface.is-tracked textarea.r39-intro-edit-input{position:relative;z-index:1;background:transparent;color:#344054;scrollbar-gutter:stable;white-space:pre-wrap;overflow-wrap:break-word;word-break:normal}

@@ -1,0 +1,1 @@
+.agent-action-spinner{flex:none;animation:agent-loading-spin 1s linear infinite}@keyframes agent-loading-spin{to{transform:rotate(360deg)}}@media(prefers-reduced-motion:reduce){.agent-action-spinner{animation:none}}

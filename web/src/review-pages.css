@@ -1,0 +1,206 @@
+/* r13 审阅页：保留原列表/详情骨架，长 JD 和事实分别滚动。 */
+.agent-review-page > .app-header {
+  height: 60px;
+  flex: none;
+  padding: 0 24px;
+}
+.agent-review-page .app-header h1 { font-size: 20px; }
+.agent-review-page .app-header p { margin-top: 3px; font-size: 12px; }
+.agent-review-page .expectation-context { max-width: 320px; }
+.agent-review-page .review-context-bar {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 24px;
+  min-height: 64px;
+  flex: none;
+  padding: 0 24px;
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+}
+.agent-review-page .review-context-bar > .batch-bar {
+  height: 64px;
+  min-width: 0;
+  gap: 12px;
+  padding: 0;
+  border: 0;
+  flex-wrap: nowrap;
+}
+.agent-review-page .review-context-bar > .expectation-bar { flex: 0 1 370px; }
+.agent-review-page .review-context-bar > .batch-bar:last-child { flex: 1; }
+.agent-review-page .review-context-bar label,
+.agent-review-page .review-context-bar .status-pill,
+.agent-review-page .review-context-bar .muted { white-space: nowrap; flex: none; }
+.agent-review-page .review-context-bar .select-wrap { width: auto; min-width: 0; flex: 1; }
+.agent-review-page .review-context-bar .select-wrap select { min-width: 0; text-overflow: ellipsis; }
+.agent-review-page .review-context-bar .select-wrap svg { flex: none; }
+.agent-review-page .review-context-bar > .batch-bar:last-child .select-wrap { max-width: 420px; }
+.agent-review-page > .setup-note { margin: 8px 24px 0; flex: none; }
+.agent-review-page .review-workspace {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: 16px;
+  padding: 16px 24px;
+}
+.agent-review-page .job-list-panel {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+.agent-review-page .job-list-panel,
+.agent-review-page .review-detail { min-width: 0; border-radius: 10px; }
+.agent-review-page .panel-heading { height: 68px; min-height: 68px; flex: none; padding: 0 18px; }
+.agent-review-page .job-list { height: auto; flex: 1; min-height: 0; overflow: auto; }
+.agent-review-page .job-list-item { min-height: 104px; padding: 16px 15px; }
+.agent-review-page .job-list-copy { min-width: 0; gap: 6px; }
+.agent-review-page .job-list-copy strong { font-size: 14px; overflow-wrap: anywhere; }
+.agent-review-page .job-list-copy > small { overflow-wrap: anywhere; }
+.agent-review-page .job-list-status { flex-wrap: wrap; }
+.agent-review-page .detail-heading { min-height: 70px; padding: 14px 20px 12px; }
+.agent-review-page .detail-heading > div { min-width: 0; }
+.agent-review-page .job-title-line { flex-wrap: wrap; }
+.agent-review-page .detail-heading h2 { font-size: 20px; overflow-wrap: anywhere; }
+.agent-review-page .company-meta { font-size: 12px; overflow-wrap: anywhere; }
+.agent-review-page .boss-link,
+.work-pool-page .boss-link { border: 0; color: #0f766e; font-size: 11px; font-weight: 600; }
+.agent-review-page .review-compact-tags { min-height: 0; padding: 0 20px 6px; gap: 6px; }
+.agent-review-page .review-basic-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  flex: none;
+  padding: 0 20px 10px;
+  color: #667085;
+  font-size: 12px;
+}
+.agent-review-page .review-basic-facts > span { min-width: 0; overflow-wrap: anywhere; }
+.agent-review-page .review-basic-facts svg { flex: none; }
+.agent-review-page .review-main-columns {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2857fr) minmax(340px, 1fr);
+  gap: 16px;
+  padding: 0 20px 20px;
+  align-items: stretch;
+}
+.agent-review-page .review-main-columns > .job-description {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+  padding: 0;
+  margin-top: 0;
+}
+.agent-review-page .job-description-head { min-height: 54px; flex: none; }
+.agent-review-page .review-main-columns .job-description > p {
+  min-height: 0;
+  flex: 1;
+  overflow: auto;
+  padding: 14px 16px;
+  font-size: 14px;
+  line-height: 1.85;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.agent-review-page .agent-manual-review { min-width: 0; overflow: hidden; }
+.agent-review-page .manual-review-head { flex: none; padding: 12px 14px 8px; }
+.agent-review-page .manual-review-head small { white-space: nowrap; font-size: 11px; }
+.agent-review-page .review-four-choices { flex: none; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.agent-review-page .agent-review-reading { overflow-x: hidden; }
+.agent-review-page .agent-review-reading .field { min-width: 0; padding: 9px 14px 0; }
+.agent-review-page .field-label-row label { min-width: 0; }
+.agent-review-page .field-label-row > span,
+.agent-review-page .field-label-row > button { flex: none; }
+.agent-review-page .review-current-message,
+.agent-review-page .fact-correspondence > div { min-width: 0; overflow-wrap: anywhere; }
+.agent-review-page .fact-correspondence strong { line-height: 1.6; }
+.agent-review-page .agent-review-reading .fact-correspondence p { font-size: 12px; margin: 4px 0; color: #0f766e; }
+.agent-review-page .fact-correspondence small { white-space: pre-wrap; overflow-wrap: anywhere; }
+.agent-review-page .fact-correspondence > div { flex: 1; }
+.agent-review-page .fact-jd-quotes, .agent-review-page .fact-tag-quotes { margin-top: 6px; overflow-wrap: anywhere; }
+.agent-review-page .agent-review-reading .fact-jd-quotes p, .agent-review-page .agent-review-reading .fact-tag-quotes p { color: #536b81; margin: 3px 0 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+.agent-review-page .fact-jd-quotes > small + small, .agent-review-page .fact-tag-quotes > small + small { margin-top: 3px; }
+.agent-review-page .agent-review-reading .agent-mark-help { display: block; }
+.agent-review-page .job-feedback-status.review-modify-error { background: #fef3f2; border-color: #fecdca; color: #b42318; }
+.agent-review-page .review-modify-error strong,
+.agent-review-page .review-modify-error p { color: #b42318; }
+.agent-review-page .review-footer { gap: 12px; padding: 12px 24px; }
+.agent-review-page .review-footer-summary { min-width: 0; }
+.agent-review-page .review-footer .agent-progress-summary { margin-left: auto; }
+.agent-review-page .review-footer-actions,
+.agent-review-page .review-footer-actions .primary-button { min-width: 0; }
+.agent-review-page .review-footer-actions .primary-button { height: 40px; white-space: nowrap; }
+.agent-review-page .agent-progress-popover article strong { overflow-wrap: anywhere; }
+.agent-review-page .agent-progress-popover .review-progress-empty { margin: 12px 0 0; color: #72859a; }
+.agent-review-page .search-fact > div { min-width: 0; overflow-wrap: anywhere; }
+.agent-review-page .search-fact p { white-space: pre-wrap; }
+.review-message-label{display:flex;align-items:center;gap:5px}.review-message-help{color:#8493a5;width:25px;height:25px}.review-error-entry{display:flex;align-items:flex-start;gap:10px;margin-top:10px}.review-error-entry>.secondary-button{flex:none;min-height:30px;height:auto;padding:6px 10px;font-size:11px}.review-error-entry>small{font-size:11px;line-height:1.7;color:#7b8898}.review-correction-entry{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0}.review-correction-entry>.secondary-button{font-size:11px;height:31px;padding:0 10px}
+/* R32 confirmed r02: emphasize the existing help without a notification box. */
+.agent-review-page .review-feedback-emphasis{display:flex;align-items:flex-start;gap:6px;margin:0;padding:0;border:0;border-radius:0;background:transparent;color:#1849a9;font-size:12px;line-height:1.65;min-width:0;overflow-wrap:anywhere}
+.agent-review-page .fact-field>.review-correction-entry{margin:0}
+.agent-review-page .review-feedback-emphasis>svg{flex:none;margin-top:2px}
+.agent-review-page .review-feedback-emphasis>strong{font-size:inherit;font-weight:500;line-height:inherit;min-width:0;color:inherit}
+
+@media (min-width: 1001px) {
+  .agent-review-page { height: 100dvh; min-height: 0; display: flex; flex-direction: column; overflow: hidden; }
+  .agent-review-page .review-workspace { flex: 1; height: auto; min-height: 0; grid-template-rows: minmax(0, 1fr); }
+  .agent-review-page .review-main-columns { flex: 1; min-height: 0; grid-template-rows: minmax(0, 1fr); }
+  .agent-review-page .review-main-columns > .job-description,
+  .agent-review-page .review-main-columns > .manual-review { height: auto; min-height: 0; }
+  .agent-review-page .review-footer { position: relative; height: auto; min-height: 85px; flex: none; }
+}
+
+/* 1366×768 继续沿原型使用页面和各阅读栏滚动，底栏停在窗口下方。 */
+@media (max-height: 850px), (max-width: 1000px) {
+  .agent-review-page { height: auto; min-height: 100dvh; overflow: visible; }
+  .agent-review-page .review-workspace { flex: none; height: auto; min-height: 0; grid-template-rows: auto; }
+  .agent-review-page .review-detail { overflow: visible; }
+  .agent-review-page .review-main-columns { flex: none; grid-template-rows: auto; }
+  .agent-review-page .agent-review-reading { flex: none; height: 55dvh; min-height: 260px; max-height: none; }
+  .agent-review-page .review-main-columns .job-description > p { max-height: 55dvh; }
+  .agent-review-page .job-list { flex: none; height: auto; max-height: 75dvh; }
+  .agent-review-page .review-footer { position: sticky; bottom: 0; }
+}
+
+@media (max-width: 1000px) {
+  .agent-review-page .review-context-bar { gap: 12px; padding: 0 16px; }
+  .agent-review-page .review-context-bar > .expectation-bar { flex-basis: 300px; }
+  .agent-review-page .review-context-bar .muted { display: none; }
+  .agent-review-page .review-workspace { grid-template-columns: 260px minmax(0, 1fr); padding: 16px; }
+  .agent-review-page .review-main-columns { grid-template-columns: minmax(0, 1fr); }
+  .agent-review-page .review-footer { flex-wrap: wrap; }
+}
+
+@media (max-width: 760px) {
+  .agent-review-page > .app-header { height: auto; min-height: 68px; padding: 12px 14px; }
+  .agent-review-page .review-context-bar { flex-wrap: wrap; gap: 4px; padding: 8px 14px; }
+  .agent-review-page .review-context-bar > .batch-bar { height: 45px; flex-basis: 100%; }
+  .agent-review-page .review-workspace { display: block; padding: 12px; }
+  .agent-review-page .job-list-panel { margin-bottom: 12px; }
+  .agent-review-page .job-list { max-height: 300px; }
+  .agent-review-page .review-detail { display: block; }
+  .agent-review-page .review-main-columns { padding: 0 14px 14px; }
+  .agent-review-page .review-footer-summary { display: flex; flex-basis: 100%; }
+  .agent-review-page .review-footer { padding: 12px 14px; }
+  .agent-review-page .review-footer .agent-progress-summary { margin: 0; width: auto; }
+}
+.review-void-trigger{flex:none;height:32px;font-size:11px;color:#8e5348;border-color:#e4d1cc}
+.review-void-reason{font-size:11px;color:#8e5348;line-height:1.5}
+.review-void-dialog{width:580px}
+.review-void-summary{margin:0;padding:14px;border:1px solid #e3e9ee;border-radius:6px;background:#f8fafc;display:grid;gap:10px}
+.review-void-summary>div{display:grid;grid-template-columns:74px minmax(0,1fr);gap:10px}
+.review-void-summary dt{color:#7c8da0}
+.review-void-summary dd{margin:0;overflow-wrap:anywhere}
+.review-void-confirm{height:36px;padding:0 15px;border:1px solid #a86454;border-radius:6px;background:#a86454;color:#fff;font-weight:600}
+.review-void-history p{max-width:850px;overflow-wrap:anywhere}
+.status-pill.voided{color:#985d38;background:#fff7e7}
+.optional-progress>small{display:block;margin:3px 0 9px;color:#667085;font-size:12px}
+.progress-tags{display:flex;flex-wrap:wrap;gap:8px}
+.progress-tags button{width:auto;padding:6px 12px;border:1px solid #d0d5dd;border-radius:20px;background:#fff;color:#526a80;font-size:12px;cursor:pointer}
+.progress-tags button.active{border-color:#e68a6c;background:#fff3ec;color:#a53d1e;font-weight:600}
+.progress-tags button:focus-visible{outline:2px solid #d66b41;outline-offset:3px}
+.progress-tags button:disabled{cursor:default;opacity:.7}
+.optional-progress .r18-optional-heading{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.optional-progress .r18-optional-heading>label{font-size:11px;color:#667085;font-weight:500;margin:0}
+.optional-progress .r18-optional-heading>small{font-size:11px;color:#7c8da0}
+.manual-review .progress-field.optional-progress{border-top:1px solid #edf0f3;padding-top:14px;margin-top:2px;display:grid;gap:10px}
+.optional-progress .r18-optional-help{font-size:10px;color:#7c8da0;line-height:1.7;margin:0}
