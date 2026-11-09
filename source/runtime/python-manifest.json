@@ -1,0 +1,11 @@
+{
+    "pypdf_url":  "https://files.pythonhosted.org/packages/3c/2c/c43c03eaf630435f023f1dc61ec4a4a78951ad5530a62c71cc89bde307b7/pypdf-6.19.0-py3-none-any.whl",
+    "pypdf_version":  "6.19.0",
+    "python_url":  "https://www.python.org/ftp/python/3.13.7/python-3.13.7-embed-amd64.zip",
+    "architecture":  "windows-x64",
+    "licenses":  [
+                     "licenses/Python-3.13.7-LICENSE.txt",
+                     "licenses/pypdf-6.19.0-LICENSE.txt"
+                 ],
+    "python_version":  "3.13.7"
+}
