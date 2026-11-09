@@ -1,0 +1,19 @@
+import {useEffect,useRef,useState} from 'react';
+import {createPortal} from 'react-dom';
+import {Info,ExternalLink,X,ArrowLeft,ChevronRight} from 'lucide-react';
+import AgreementText from './AgreementText.jsx';
+import legalContent from './legal-content.json';
+import './usage-notice.css';
+
+export function UsageContent({onAgreement}){return <div className="usage-content"><section><h3>用途范围</h3><div><p>允许非商业使用，并额外允许个人使用本软件处理本人的求职事务，包括寻找有偿工作。未经另行授权，禁止超出许可范围进行商业使用。</p><div className="usage-agreement-links"><button onClick={e=>onAgreement(e,'license')}>许可协议<ChevronRight size={14}/></button><button onClick={e=>onAgreement(e,'notice')}>补充协议<ChevronRight size={14}/></button></div></div></section><section><h3>非官方项目</h3><p>本项目与 BOSS 直聘无官方关联。</p></section><section><h3>项目 GitHub</h3><a className="usage-github" href="https://github.com/Muhah99/boss-jobmate" target="_blank" rel="noopener noreferrer">github.com/Muhah99/boss-jobmate<ExternalLink size={14}/></a></section></div>}
+
+export function UsageFirst(){return <UsageNotice placement="first"/>}
+
+export function UsageNotice({placement='footer'}){
+ const [open,setOpen]=useState(false),[agreement,setAgreement]=useState(null),trigger=useRef(null),close=useRef(null),agreementTrigger=useRef(null);
+ const show=e=>{trigger.current=e.currentTarget;setOpen(true)};
+ const readAgreement=(e,kind)=>{agreementTrigger.current=e.currentTarget;setAgreement({kind,fromAbout:open});setOpen(true)};
+ const dismiss=()=>{if(agreement){const fromAbout=agreement.fromAbout;setAgreement(null);if(!fromAbout)setOpen(false);requestAnimationFrame(()=>agreementTrigger.current?.isConnected&&agreementTrigger.current.focus({preventScroll:true}));return}setOpen(false);requestAnimationFrame(()=>trigger.current?.isConnected&&trigger.current.focus({preventScroll:true}))};
+ useEffect(()=>{if(open)close.current?.focus({preventScroll:true})},[open,agreement]);
+ return <>{placement==='first'?<section className="usage-first usage-first-expanded" aria-label="首次项目说明"><div className="usage-first-heading"><h2><Info size={18}/>关于本项目</h2></div><UsageContent onAgreement={readAgreement}/></section>:<div data-usage-slot={placement==='task'?'taskNotice':'footer'} className={placement==='task'?'setting-row usage-task-notice':undefined}>{placement==='task'?<><div><strong>关于本项目</strong><small>仅限个人非商业使用</small></div><button type="button" className="text-button usage-task-open" onClick={show}>查看说明<ChevronRight size={14}/></button></>:<div className="usage-footer-line"><span>仅限个人非商业使用</span><button type="button" className="text-button" onClick={show}>关于本项目</button></div>}</div>}{open&&createPortal(<div className="usage-dialog-mask" onKeyDown={e=>{if(e.key==='Escape')dismiss();if(e.key==='Tab'){const items=e.currentTarget.querySelectorAll('button,a[href],[tabindex="0"]');if(e.shiftKey&&document.activeElement===items[0]){e.preventDefault();items[items.length-1].focus()}else if(!e.shiftKey&&document.activeElement===items[items.length-1]){e.preventDefault();items[0].focus()}}}}><section role="dialog" aria-modal="true" aria-labelledby="usage-dialog-title" className={'usage-dialog'+(agreement?' usage-agreement-dialog':'')}><header><div><h2 id="usage-dialog-title">{agreement?(agreement.kind==='license'?'许可协议':'补充协议'):'关于本项目'}</h2><p>{agreement?(agreement.kind==='license'?'PolyForm Noncommercial License 1.0.0':'个人求职补充授权与版权说明'):'用途范围与使用注意事项'}</p></div><button ref={close} className="usage-close" aria-label={agreement?'关闭协议':'关闭关于本项目'} onClick={dismiss}><X size={20}/></button></header>{agreement?<AgreementText key={agreement.kind} text={legalContent[agreement.kind]} onLicense={()=>setAgreement(current=>({...current,kind:'license'}))}/>:<UsageContent onAgreement={readAgreement}/>}<footer><button className="secondary-button" onClick={dismiss}><ArrowLeft size={16}/>{agreement&&agreement.fromAbout?'返回关于本项目':'返回原页面'}</button></footer></section></div>,document.body)}</>;
+}

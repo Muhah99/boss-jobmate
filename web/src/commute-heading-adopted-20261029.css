@@ -1,0 +1,14 @@
+/* r02: retain stacked modules, unify heading structure and insets. */
+.commute-detail-columns{display:grid;grid-template-columns:minmax(0,1fr);gap:16px}
+.adopted-task-layout .commute-detail-columns .commute-grades-column,.adopted-task-layout .commute-detail-columns .commute-origin-compact{background:#f8fafc;border-radius:6px;padding:16px;margin:0}
+.commute-grades-column{display:flex;flex-direction:column;gap:12px}
+.job-task-page .commute-detail-columns .commute-grade-heading,.job-task-page .commute-detail-columns .work-task-origin-title>strong{margin:0;font-size:13px;line-height:24px;font-weight:600;color:#344054}
+.adopted-task-layout .commute-detail-columns .work-task-origin-heading{min-height:24px;margin:0 0 12px}
+.adopted-task-layout .commute-detail-columns .jobmate-grade-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.adopted-task-layout .commute-detail-columns .jobmate-grade-grid>div{background:#fff;min-height:56px;padding:10px;gap:8px}
+.adopted-task-layout .commute-detail-columns .work-task-origins{margin:0;gap:10px;flex-direction:row;flex-wrap:wrap}
+.adopted-task-layout .commute-detail-columns .work-task-commute-note{margin:0 0 12px}
+@media(max-width:800px){.adopted-task-layout .commute-detail-columns .jobmate-grade-grid{grid-template-columns:1fr}}
+
+/* r03: center grade letters inside their existing pills. */
+.job-task-page .commute-detail-columns .jobmate-grade-grid .grade-badge{display:inline-flex;align-items:center;justify-content:center;height:24px;line-height:1;padding:0;text-align:center}

@@ -1,0 +1,9 @@
+.jp-product-progress{display:flex;align-items:center;gap:12px;padding:12px 16px}.jp-product-copy{flex:1;min-width:0}.jp-product-copy>strong{display:flex;align-items:center;gap:6px;font-size:13px}.jp-product-copy>p{font-size:12px;line-height:1.6;margin:5px 0;overflow-wrap:anywhere}.jp-product-copy>small{font-size:11px;margin-right:10px}.jp-product-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:flex-end;flex:none;max-width:45%}.jp-product-actions button{white-space:nowrap}.jp-product-progress .status-pill{margin-right:5px}
+
+/* Adopted HUD actions: component-scoped link and semantic 32px controls. */
+.jp-product-stage{color:#344054}
+.jp-product-action-buttons{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+.jp-product-actions .jp-action-button{display:inline-flex;align-items:center;justify-content:center;gap:5px;height:32px;min-height:32px;box-sizing:border-box;padding:5px 12px;background:#f0f8f7;border:1px solid #cbe6e2;border-radius:4px;color:#347f77;font-family:inherit;font-size:12px;font-weight:400;line-height:18px;cursor:pointer}
+.jp-product-actions .jp-action-button:disabled{opacity:.55;cursor:default}
+.jp-product-actions .jp-danger-button{background:#fff;border-color:#d7e3ea;color:#b42318}
+.jp-product-actions .jp-details-link{display:inline-flex;align-items:center;justify-content:center;min-height:32px;box-sizing:border-box;padding:5px 0;border:0;border-radius:0;background:transparent;color:#347f77;font-family:inherit;font-size:12px;font-weight:400;line-height:18px;cursor:pointer}

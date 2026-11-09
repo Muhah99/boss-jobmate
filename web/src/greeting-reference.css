@@ -1,0 +1,5 @@
+.greeting-reference-card{grid-column:1/-1}
+.greeting-reference-layout{display:grid;grid-template-columns:320px minmax(0,1fr);gap:28px;align-items:start;min-width:0}
+.greeting-reference-layout>.setup-message-length{border-bottom:0;padding-bottom:0;align-content:start}
+.greeting-reference-editor{display:grid;gap:12px;min-width:0}
+@media(max-width:900px){.greeting-reference-layout{grid-template-columns:minmax(0,1fr);gap:18px}}

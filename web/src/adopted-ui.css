@@ -1,0 +1,23 @@
+/* User-adopted 2026-10-25 increments; keep existing product layout and handlers. */
+.ip-inline-progress .ip-success-icon{width:18px;height:18px;flex:none;margin-top:2px;color:#067647}
+.setup-origin-settings,.setup-map-settings{scroll-margin-top:24px;scroll-margin-bottom:90px}
+.job-task-page .commute-filter-layout{display:grid;gap:18px}
+.job-task-page .commute-filter-layout .work-task-commute-switch>div:first-child{flex:1;min-width:0}
+.job-task-page .commute-filter-controls{display:flex;align-items:center;gap:18px;flex-shrink:0}
+.job-task-page .commute-filter-layout .jobmate-time-row{margin:0;gap:10px}
+.job-task-page .commute-grade-heading{margin:2px 0 0;font-size:13px;line-height:1.6;font-weight:600;color:#344054}
+.job-task-page .commute-filter-layout .jobmate-grade-grid>div{display:flex;align-items:center;justify-content:center;gap:12px;padding:14px 12px}
+.job-task-page .commute-filter-layout .jobmate-grade-grid .grade-badge{margin:0;flex:none;width:30px}
+.job-task-page .commute-filter-layout .jobmate-grade-grid label{justify-content:flex-start;min-width:0}
+.job-task-page .commute-off-summary{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 24px;background:#fff}
+.commute-off-summary .settings-card-head{display:contents}
+.commute-off-summary .settings-card-head>div{grid-column:1;grid-row:1}
+.commute-off-summary .settings-card-head>.primary-button{grid-column:2;grid-row:1 / span 2;align-self:center}
+.commute-off-title{display:inline-flex;align-items:center;gap:10px}
+.commute-off-title .setup-status{font-size:11px;font-weight:400}
+.commute-off-benefit{grid-column:1;grid-row:2;margin:0;color:#667085;font-size:12px;line-height:1.6}
+.job-task-page .commute-origin-compact .work-task-origin-title{display:flex;align-items:center;gap:10px;min-width:0}
+.job-task-page .commute-origin-compact .work-task-origin-heading>.setup-text-button{margin-left:auto;flex:none}
+.job-task-page .commute-origin-compact .work-task-origins article{flex:0 1 160px;width:160px;min-width:0;max-width:100%;min-height:40px;box-sizing:border-box;align-items:center;justify-content:center;text-align:center}
+@media(max-width:1000px){.job-task-page .commute-filter-layout .work-task-commute-switch{flex-wrap:wrap}.job-task-page .commute-filter-controls{flex-wrap:wrap}}
+@media(max-width:720px){.job-task-page .commute-off-summary{grid-template-columns:1fr}.commute-off-summary .settings-card-head>.primary-button{grid-column:1;grid-row:3;justify-self:start}}

@@ -1,0 +1,12 @@
+.r40-review-v25 .jd-highlight-caption{margin:0;padding:8px 14px;background:#fff;color:#667085;font-size:11px;line-height:1.6;border-bottom:1px solid #e4e7ec}.r40-review-v25 .jd-source-mark{background:transparent;color:#0f766e;border-radius:2px;box-decoration-break:clone;-webkit-box-decoration-break:clone}.r40-review-v25 .jd-source-mark.active{background:transparent;color:#0f766e;box-shadow:none}.r40-review-v25 .r40-jd-body{min-height:0;overflow:auto;scroll-behavior:auto}
+/* r09: selected quotes use bold text without background or thicker underline. */
+.r40-review-v25 .jd-source-mark{font-weight:400}
+.r40-review-v25 .jd-source-mark.active{font-weight:700}
+
+.r40-review-v25 .jd-source-mark[role="button"]{cursor:pointer}.r40-review-v25 .jd-source-mark[role="button"]:focus-visible{outline:2px solid #0f766e;outline-offset:2px}
+
+/* r05: underline makes exact linked JD quotes visibly actionable. */
+.r40-review-v25 .jd-source-mark[role="button"]{text-decoration:none;border-bottom:1px dashed #7ea69e}
+
+/* r10: match the message link underline in both states. */
+.r40-review-v25 .jd-source-mark.active{border-bottom-color:#0f766e}

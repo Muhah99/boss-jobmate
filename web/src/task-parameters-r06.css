@@ -1,0 +1,23 @@
+/* Restore the original two-column stretch alignment; keep existing controls and tokens. */
+.adopted-task-layout .job-task-settings-layout{align-items:stretch}
+.adopted-task-layout .job-task-parameter-column{align-self:stretch}
+.adopted-task-layout .work-task-quantities.single{grid-template-columns:minmax(0,1fr)}
+
+
+.adopted-task-layout .work-task-quantities.single{max-width:none;width:100%}
+
+.adopted-task-layout .task-process-overview{display:flex;align-items:center;gap:32px;min-height:108px;padding:22px 24px;background:#fcfdfd;border:1px solid #d8e2e9;border-radius:7px;cursor:default}
+.task-process-overview>h2{display:flex;align-items:center;gap:14px;flex:none;margin:0;padding-right:28px;border-right:1px solid #d8e2e9;min-height:48px;font-size:18px;line-height:1.5;font-weight:700;color:#344054;white-space:nowrap}
+.task-process-overview>h2 svg{flex:none;color:#367b77;stroke-width:1.8}
+.task-process-overview ol{list-style:none;display:flex;align-items:center;flex:1;min-width:0;gap:26px;padding:0;margin:0}
+.task-process-overview li{display:flex;align-items:center;justify-content:space-between;flex:1;min-width:0;gap:22px}
+.task-process-overview li:nth-child(4){flex:1.32}
+.task-process-overview li:last-child{flex:0 0 auto}
+.task-process-step{display:flex;align-items:center;gap:14px;white-space:nowrap}
+.task-process-number{color:#83b7b5;font-size:15px;line-height:1.6;font-weight:700;font-variant-numeric:tabular-nums}
+.task-process-label{color:#344054;font-size:16px;line-height:1.6;font-weight:600}
+.task-process-overview li>svg{color:#0f766e;flex:none;width:24px;height:24px}
+@media(max-width:1100px){.adopted-task-layout .task-process-overview{gap:20px;padding:20px}.task-process-overview ol{gap:14px}.task-process-overview li{gap:12px}.task-process-step{gap:8px}.task-process-overview>h2{padding-right:20px}}
+@media(max-width:800px){.adopted-task-layout .task-process-overview{align-items:flex-start;flex-direction:column;gap:16px}.task-process-overview>h2{border-right:0;padding-right:0;min-height:0}.task-process-overview ol{flex-wrap:wrap;width:100%;gap:16px}.task-process-overview li,.task-process-overview li:last-child{flex:1 1 160px}}
+
+.adopted-task-layout .task-quantity-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;min-width:0}.adopted-task-layout .task-quantity-cards.single{grid-template-columns:minmax(0,1fr)}.task-quantity-cards>.settings-card{min-width:0}

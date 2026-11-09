@@ -1,0 +1,182 @@
+/* 投递前审阅：压缩顶部、消除详情区的双层滚动，并让 JD 成为明确的独立阅读区。 */
+.review-page .app-header { height: 60px; padding: 0 24px; }
+.review-page .app-header h1 { font-size: 20px; }
+.review-page .app-header p { margin-top: 3px; font-size: 12px; }
+.review-page .header-actions { display: flex; align-items: center; gap: 10px; }
+.review-page .batch-bar { height: 64px; padding: 0 24px; }
+.review-workspace { height: calc(100vh - 204px); min-height: 560px; padding: 14px 24px 16px; gap: 16px; }
+.review-detail { padding: 0; overflow: hidden; display: flex; flex-direction: column; }
+.detail-heading { min-height: 70px; padding: 14px 20px 12px; flex: 0 0 auto; }
+.review-detail > .detail-heading { border-bottom: 0; }
+.detail-heading h2 { font-size: 20px; }
+.company-meta { margin-top: 5px; display: flex; align-items: center; flex-wrap: wrap; gap: 6px; color: #667085; font-size: 12px; }
+.company-meta em { padding: 3px 7px; border-radius: 5px; background: #f2f4f7; color: #667085; font-size: 10px; font-style: normal; font-weight: 700; }
+.job-tag-row { min-height: 32px; padding: 0 20px 10px; display: flex; align-items: center; flex-wrap: wrap; gap: 7px; flex: 0 0 auto; }
+.job-tag-row > span { color: #6a7a8d; font-size: 11px; }
+.job-tag-row > em { padding: 4px 8px; border-radius: 999px; background: #edf7f5; color: #258178; font-size: 10px; font-style: normal; font-weight: 700; }
+.job-tag-row > em:nth-of-type(1) { background: #edf4ff; color: #4877aa; }
+.job-tag-row > em:nth-of-type(3) { background: #fff5e6; color: #9a681e; }
+.job-tag-row > b { padding: 5px 10px; border-radius: 6px; background: #fff4e5; color: #a66322; font-size: 10px; }
+.detail-insight-row { margin: 0 20px 10px; display: grid; grid-template-columns: minmax(0, 1.2857fr) minmax(340px, 1fr); gap: 16px; align-items: stretch; flex: 0 0 auto; }
+.detail-insight-row.single { grid-template-columns: 1fr; }
+.agent-evaluation-card { min-height: 62px; padding: 11px 14px; border-radius: 7px; background: #f0f7f5; }
+.agent-evaluation-card strong { display: block; color: #183a53; font-size: 12px; }
+.agent-evaluation-card p { margin: 6px 0 0; color: #5a7188; font-size: 11px; line-height: 1.5; white-space: normal; overflow-wrap: anywhere; }
+.commute-card { min-height: 62px; margin: 0; flex: 0 0 auto; }
+.detail-insight-row > .agent-evaluation-card,
+.detail-insight-row > .commute-card { min-height: 72px; height: 100%; }
+.address-block, .commute-result { padding: 10px 14px; }
+.settings-page .settings-card.commute-card { display: grid; grid-template-columns: none; min-height: 0; margin: 0; padding: 17px 20px; background: #fff; border: 1px solid var(--border); border-radius: 7px; }
+.detail-columns { min-height: 0; flex: 1; padding: 0 20px 20px; grid-template-columns: minmax(0, 1.2857fr) minmax(340px, 1fr); gap: 16px; align-items: stretch; }
+.job-description, .manual-review { min-height: 0; height: 100%; margin-top: 0; align-self: stretch; }
+.job-description { padding: 0; }
+.job-description-head { min-height: 54px; }
+.job-description p { min-height: 0; max-height: none; overflow: auto; padding: 14px 16px; font-size: 12px; line-height: 1.65; }
+.manual-review { overflow: auto; }
+.manual-review-head { padding: 12px 14px 8px; }
+.manual-review .field { padding: 9px 14px 0; }
+.manual-review .field:last-child { padding-bottom: 12px; }
+.manual-review .field textarea { min-height: 42px; }
+.review-footer { height: 80px; }
+.review-footer-actions .primary-button { height: 40px; }
+
+/* 批次岗位统计。 */
+.review-batch-summary { display: inline-flex; align-items: center; gap: 8px; margin-left: auto; color: #667085; font-size: 11px; }
+.review-batch-summary span { padding: 5px 9px; border: 1px solid #dce8e8; border-radius: 999px; background: #f8fbfb; white-space: nowrap; }
+.review-batch-summary strong { color: #226e68; }
+
+/* 底栏入口保持轻量；展开后使用完整、可读的处理记录窗口。 */
+.review-footer .agent-footer-task { position: absolute; left: 0; right: 0; width: 300px; margin: auto; }
+.agent-history-overlay { position: fixed; inset: 0; z-index: 90; display: grid; place-items: center; padding: 24px; background: #17324d77; backdrop-filter: blur(2px); }
+.agent-history-dialog { width: min(760px, 100%); max-height: calc(100vh - 48px); overflow: auto; border: 1px solid #a4ddd4; border-radius: 18px; background: #fff; box-shadow: 0 28px 70px #0b1f3560; padding: 30px 38px 34px; }
+.agent-history-dialog > header { display: flex; align-items: flex-start; justify-content: space-between; gap: 18px; padding-bottom: 18px; border-bottom: 1px solid #d8e1e7; }
+.agent-history-title { display: flex; align-items: center; gap: 12px; }
+.agent-history-title h2 { margin: 0; color: #17324d; font-size: 27px; letter-spacing: -.02em; }
+.agent-history-title span { padding: 7px 13px; border-radius: 999px; background: #e6f7ee; color: #277853; font-size: 13px; font-weight: 700; }
+.agent-history-title span.failed { background: #fef3f2; color: #b42318; }
+.agent-history-dialog header p { margin: 9px 0 0; color: #718399; font-size: 14px; }
+.agent-history-dialog header button { width: 30px; height: 30px; border: 0; border-radius: 6px; background: transparent; color: #667085; display: grid; place-items: center; }
+.agent-history-dialog header button:hover { background: #f2f4f7; color: #344054; }
+.agent-history-list { display: grid; padding: 16px 0 6px; }
+.agent-history-list article { display: grid; grid-template-columns: 26px minmax(0, 1fr) auto; gap: 12px; align-items: start; padding: 16px 0; border-bottom: 1px solid #e8eef1; }
+.agent-history-list article:last-child { border-bottom: 0; }
+.agent-history-list article > svg { color: #2f9a67; margin-top: 2px; }
+.agent-history-list strong { display: block; color: #183a53; font-size: 17px; }
+.agent-history-list p { margin: 5px 0 0; color: #62758a; font-size: 14px; line-height: 1.55; }
+.agent-history-list time { padding-top: 3px; color: #8b9bab; font-size: 12px; white-space: nowrap; }
+.agent-history-dialog > footer { margin-top: 16px; padding: 13px 16px; border-radius: 9px; background: #eff9f7; color: #21847b; font-size: 14px; }
+
+@media (max-width: 1000px) {
+  .review-detail { overflow: auto; }
+  .detail-columns { display: grid; flex: initial; grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(280px, 1fr) auto; }
+  .job-description, .manual-review { height: auto; align-self: auto; }
+  .job-description { min-height: 280px; }
+}
+
+@media (max-width: 720px) {
+  .review-page .app-header { height: auto; min-height: 68px; padding: 12px 14px; }
+  .review-page .app-header h1 { font-size: 20px; }
+  .review-page .batch-bar { height: auto; min-height: 60px; padding: 10px 14px; }
+  .review-workspace { height: auto; min-height: 0; padding: 12px; }
+  .review-detail { display: block; overflow: visible; }
+  .detail-heading { padding: 14px; }
+  .company-meta { font-size: 11px; }
+  .job-tag-row { padding: 0 14px 10px; }
+  .detail-insight-row { margin: 0 14px 10px; grid-template-columns: 1fr; }
+  .commute-card { grid-template-columns: 1fr; }
+  .commute-result { border-top: 1px solid #b8e4dc; border-left: 0; }
+  .detail-columns { display: grid; min-height: 0; padding: 0; grid-template-columns: 1fr; }
+  .job-description, .manual-review { min-height: 0; overflow: visible; }
+  .job-description p { max-height: none; overflow: visible; }
+  .review-batch-summary { width: 100%; margin-left: 0; }
+  .agent-history-overlay { padding: 14px; }
+  .agent-history-dialog { padding: 22px 20px; }
+  .agent-history-title h2 { font-size: 22px; }
+  .agent-history-list strong { font-size: 15px; }
+  .agent-history-list p, .agent-history-dialog > footer { font-size: 12px; }
+}
+
+/* v0.4.0 岗位任务与投递执行状态。 */
+.job-task-page .app-header { height: 102px; padding: 0 32px; }
+.job-task-page .app-header h1 { font-size: 26px; }
+.workflow-task-content { padding: 16px 0 0; }
+.background-agent-card { width: min(1294px, calc(100% - 64px)); min-height: 118px; margin: 0 auto 16px; padding: 20px 29px; border: 1px solid #cfe3df; border-radius: 9px; background: linear-gradient(100deg, #f6fcfa, #fff); display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.background-agent-copy { min-width: 0; display: flex; align-items: center; gap: 24px; }
+.background-agent-heading { display: flex; align-items: center; gap: 11px; color: #27827a; }
+.background-agent-heading h2 { margin: 0; color: #17324d; font-size: 16px; }
+.background-agent-heading p { margin: 5px 0 0; color: #74879a; font-size: 11px; }
+.background-agent-status { display: inline-flex; align-items: center; gap: 7px; padding: 6px 9px; border-radius: 6px; background: #eef2f6; color: #5e7185; font-size: 11px; font-weight: 700; white-space: nowrap; }
+.background-agent-status > span { width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+.background-agent-status.ready { background: #e8f7f1; color: #237c70; }
+.background-agent-status.starting, .background-agent-status.busy { background: #fff6e7; color: #b56d13; }
+.background-agent-status.error { background: #fff0ee; color: #c84435; }
+.background-agent-actions { min-width: min(550px, 50%); display: grid; justify-items: end; gap: 7px; }
+.background-agent-actions > p { width: 100%; margin: 0; color: #667f93; font-size: 11px; text-align: right; }
+.background-agent-actions > p.agent-error-detail { color: #bd4437; }
+.background-agent-actions > div { display: flex; gap: 9px; }
+.background-agent-actions .secondary-button { height: 34px; padding: 0 12px; font-size: 12px; }
+.background-agent-actions .agent-close-button { color: #9d3b35; }
+.background-agent-actions small { color: #8191a0; font-size: 10px; text-align: right; }
+.workflow-task-card { width: min(1294px, calc(100% - 64px)); margin: 0 auto; border: 1px solid #d7e0e8; border-radius: 9px; background: #fff; overflow: hidden; }
+.workflow-form-row { min-height: 112px; padding: 26px 29px; border-bottom: 1px solid #e3e9ed; display: grid; grid-template-columns: 295px minmax(0, 1fr); align-items: center; gap: 28px; }
+.workflow-form-row h2 { margin: 0; color: #17324d; font-size: 17px; }
+.workflow-form-row p { margin: 8px 0 0; color: #74879a; font-size: 12px; }
+.task-select { height: 46px; padding: 0 13px; border: 1px solid #ccd7df; border-radius: 7px; display: flex; align-items: center; gap: 10px; color: #526a80; }
+.task-select select { min-width: 0; flex: 1; appearance: none; border: 0; outline: 0; background: transparent; color: #344e67; font-size: 14px; font-weight: 600; }
+.task-select svg:first-child { color: #60788d; }
+.task-select svg:last-child { color: #647a8e; }
+.workflow-form-row .toggle { justify-self: start; }
+.mode-row { align-items: start; min-height: 170px; }
+.task-mode-options { display: grid; gap: 17px; padding-top: 3px; }
+.task-mode-options button { display: flex; align-items: center; gap: 10px; width: fit-content; padding: 0; border: 0; background: transparent; color: #526a80; font-size: 14px; text-align: left; }
+.task-mode-options button > span { width: 20px; height: 20px; border: 1.5px solid #c8d4dd; border-radius: 50%; display: block; background: #fff; box-shadow: inset 0 0 0 5px #fff; }
+.task-mode-options button.active { color: #173d55; font-weight: 700; }
+.task-mode-options button.active > span { border-color: #13978d; background: #13978d; }
+.task-mode-options button:disabled { cursor: not-allowed; opacity: .65; }
+.task-notice { min-height: 48px; margin: 24px 29px 0; padding: 0 14px; border: 1px solid #f6d39a; border-radius: 7px; background: #fff8eb; display: flex; align-items: center; gap: 9px; color: #a6651f; font-size: 12px; }
+.task-notice svg { flex: 0 0 auto; }
+.task-start-button { height: 46px; margin: 34px 29px; padding: 0 22px; border-radius: 6px; font-size: 15px; }
+.workflow-task-overlay { position: fixed; z-index: 100; inset: 0; display: grid; place-items: center; padding: 24px; background: #10213176; backdrop-filter: blur(2px); }
+.workflow-task-dialog { width: min(400px, 100%); min-height: 248px; padding: 30px 24px; border-radius: 12px; background: #fff; box-shadow: 0 20px 45px #0b1f355c; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+.workflow-task-dialog > svg { color: #079288; }
+.workflow-task-dialog h2 { margin: 20px 0 0; color: #18364f; font-size: 19px; }
+.workflow-task-dialog p { margin: 11px 0 25px; color: #74879a; font-size: 12px; }
+.stop-button { height: 40px; min-width: 96px; padding: 0 17px; border: 1px solid #ef5350; border-radius: 6px; background: #fff; color: #dc3434; display: inline-flex; align-items: center; justify-content: center; gap: 7px; font-size: 13px; font-weight: 700; }
+.stop-button:disabled { cursor: not-allowed; opacity: .65; }
+.today-batch-actions { min-height: 92px; padding-right: 32px; border-bottom: 1px solid #e5e7eb; background: #fff; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.today-batch-actions .batch-bar { min-width: 0; flex: 1; border-bottom: 0; }
+.delivery-action { min-width: 126px; flex: 0 0 auto; }
+.draft-save-state { min-width: 112px; display: inline-flex; align-items: center; justify-content: flex-end; gap: 4px; color: #74879a; font-size: 10px; white-space: nowrap; }
+.draft-save-state.saved { color: #27827a; }
+.draft-save-state.error { color: #c8412f; }
+.manual-review-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+
+@media (max-width: 720px) {
+  .job-task-page .app-header { height: auto; min-height: 72px; padding: 13px 14px; }
+  .workflow-task-content { padding-top: 12px; }
+  .background-agent-card { width: calc(100% - 24px); margin-bottom: 12px; padding: 17px 18px; align-items: flex-start; flex-direction: column; gap: 14px; }
+  .background-agent-copy { width: 100%; justify-content: space-between; gap: 12px; }
+  .background-agent-heading p { display: none; }
+  .background-agent-actions { width: 100%; min-width: 0; justify-items: start; }
+  .background-agent-actions > p, .background-agent-actions small { text-align: left; }
+  .workflow-task-card { width: calc(100% - 24px); }
+  .workflow-form-row { min-height: auto; grid-template-columns: 1fr; gap: 17px; padding: 21px 18px; }
+  .workflow-form-row h2 { font-size: 16px; }
+  .task-select { width: 100%; }
+  .mode-row { min-height: auto; }
+  .task-notice { min-height: 0; margin: 18px; padding: 12px; align-items: flex-start; line-height: 1.5; }
+  .task-start-button { width: calc(100% - 36px); margin: 22px 18px; }
+  .today-batch-actions { min-height: 0; padding: 0; align-items: stretch; flex-direction: column; gap: 0; }
+  .today-batch-actions .batch-bar { min-height: 62px; width: 100%; padding: 10px 14px; }
+  .delivery-action { width: calc(100% - 28px); margin: 0 14px 12px; }
+  .workflow-task-dialog { min-height: 220px; }
+}
+
+/* Desktop cards share the remaining finite height; long content scrolls inside each card. */
+@media (min-width: 1001px) {
+  .review-workspace { grid-template-rows: minmax(0, 1fr); }
+  .review-detail { min-height: 0; }
+  .review-main-columns { grid-template-rows: minmax(0, 1fr); }
+  .review-main-columns > .job-description,
+  .review-main-columns > .manual-review { height: auto; min-height: 0; }
+}

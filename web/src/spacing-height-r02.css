@@ -1,0 +1,25 @@
+.setup-init-wrap.r17-init-intro{margin-top:16px;margin-bottom:16px;padding:0;height:calc(100dvh - 120px);min-height:540px;display:grid;grid-template-rows:auto auto minmax(0,1fr) auto;gap:12px}
+.r17-init-intro .setup-steps{padding:0 0 4px;margin:0}
+.r17-init-intro .setup-init-heading{margin:0}
+.r17-init-intro .setup-init-heading h2{margin:0 0 4px}
+.r17-init-intro .setup-init-heading p{margin:0}
+.setup-init-wrap.r17-init-intro .r17-intro-section{padding:18px 22px;min-height:0;display:flex;flex-direction:column;gap:10px}
+.r17-init-intro .setup-introduction-purpose{margin:0}
+.r17-init-intro .r17-editor-grid{display:flex;flex:1;min-height:0}
+.r17-init-intro .r17-editor-column{display:flex;flex-direction:column;flex:1;min-height:0;gap:10px}
+.r17-init-intro .r17-source-note{padding:7px 10px;margin:0;flex:none}
+.r17-init-intro .setup-highlight-editor{flex:1;min-height:0;height:auto}
+.r17-init-intro .r17-intro-section .setup-highlight-editor textarea.setup-intro-input,.r17-init-intro .r17-intro-section .setup-highlight-backdrop{height:100%!important;min-height:0!important;resize:none}
+.r17-init-intro .setup-section-actions{margin:0;min-height:18px}
+.r17-init-intro .setup-init-footer{margin:0;padding-top:12px}
+@media(max-width:700px){.setup-init-wrap.r17-init-intro{height:auto;min-height:0}.r17-init-intro .setup-highlight-editor{min-height:380px}}
+
+.r17-init-intro .r17-editor-grid{align-items:stretch}
+
+
+.adopted-task-layout .task-process-overview{padding-right:48px}
+.adopted-task-layout .task-process-overview ol{display:grid;grid-template-columns:max-content minmax(24px,1fr) max-content minmax(24px,1fr) max-content minmax(24px,1fr) max-content minmax(24px,1fr) max-content;gap:12px;align-items:center}
+.adopted-task-layout .task-process-overview ol li{display:contents}
+.adopted-task-layout .task-process-overview li>svg{justify-self:center}
+@media(max-width:1100px){.adopted-task-layout .task-process-overview{padding-right:32px}.adopted-task-layout .task-process-overview ol{gap:8px}}
+@media(max-width:800px){.adopted-task-layout .task-process-overview ol{display:flex;gap:16px}.adopted-task-layout .task-process-overview ol li{display:flex}}

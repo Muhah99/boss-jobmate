@@ -1,0 +1,43 @@
+.r17-editor-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:24px;align-items:start}
+.r17-editor-column,.r17-preview-column{display:grid;gap:12px;min-width:0}
+.r17-preview-column{border-left:1px solid #e5eaf0;padding-left:24px}
+.r17-preview-column h3{font-size:13px;margin:0;color:#344054}
+.r17-preview-column>.setup-help{margin:0}
+.r17-preview-column .setup-example-message{margin:0;min-height:115px}
+.r17-source-note{display:flex;gap:10px;align-items:center;flex-wrap:wrap;padding:9px 11px;border:1px solid #dce8e8;background:#f5faf9;border-radius:5px;font-size:11px;color:#607a79}
+.r17-source-note button{margin-left:auto}
+.r17-choice-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.r17-choice{padding:26px 22px;background:#fff;border:1px solid #d8e2e9;border-radius:7px;display:grid;gap:12px;text-align:left;color:#344054}
+.r17-choice:hover{border-color:#0f766e;background:#f7fcfb}
+.r17-choice strong{font-size:15px}
+.r17-choice span{font-size:12px;line-height:1.8;color:#667085}
+.r17-tool-actions,.r17-intro-actions{display:flex;align-items:center;justify-content:flex-end;gap:10px;flex-wrap:wrap}
+.r17-tool{max-width:760px;width:100%;margin:0 auto}
+.r17-tool-header{display:flex;align-items:center;justify-content:space-between;gap:14px}
+.r17-tool-header h2{margin:0}
+.r17-tool .setup-field{margin-top:4px}
+.r17-tool-note{margin:0}
+.r17-tool-actions{justify-content:space-between}
+.r17-preview-actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.r17-preview-actions button{height:34px;font-size:11px}
+.r17-preview-column .setup-field>span{font-size:11px}
+.r17-preview-column .setup-field textarea{min-height:80px}
+.r17-choice small{font-size:11px;color:#0f766e}
+.message-quote{border:0;border-bottom:1px dashed #73aaa3;padding:0 1px;background:transparent;color:inherit;font:inherit;line-height:inherit;display:inline;user-select:text;cursor:pointer}
+.message-quote:hover:not(:disabled),.message-quote[aria-pressed=true]{background:#fff0af;border-bottom-color:#c4a04a}
+.message-quote:focus-visible{outline:2px solid #0f766e;outline-offset:3px}
+.message-quote:disabled{cursor:default}
+.r17-intro-actions button{height:36px;display:inline-flex;align-items:center;justify-content:center;gap:6px;white-space:nowrap}
+.setup-profile-grid>.r17-wide{grid-column:1/-1}
+.r17-editor-grid .setup-highlight-editor textarea.setup-intro-input,.r17-editor-grid .setup-highlight-backdrop{height:300px;min-height:300px}
+.setup-init-wrap:has(.r17-editor-grid){max-width:1100px}
+.r17-message{line-height:1.9;font-size:13px;white-space:pre-wrap;overflow-wrap:anywhere;margin:0;user-select:text}
+.r17-quote-links{display:flex;flex-wrap:wrap;gap:6px 12px}
+.r17-quote-links button{white-space:normal;text-align:left}
+.r17-expired{color:#9a6700;padding:8px 10px;border:1px solid #f4dfae;background:#fffaeb;border-radius:5px;font-size:11px;line-height:1.7}
+.r17-origin-dialog{width:480px;max-height:calc(100vh - 60px)}
+.r17-origin-dialog .jobmate-dialog-body{display:grid;gap:12px;max-height:calc(100vh - 220px);overflow:auto}
+.r17-origin-dialog h3{font-size:12px;margin:0;color:#475467}
+.r17-origin-dialog p{font-size:12px;line-height:1.8;overflow-wrap:anywhere;white-space:pre-wrap;margin:0}
+.r17-source-copy{max-height:230px;overflow:auto;padding:12px;border:1px solid #e2e9ee;border-radius:6px;background:#f8fafc;white-space:pre-wrap;overflow-wrap:anywhere;font-size:12px;line-height:1.8}
+@media(max-width:1000px){.r17-editor-grid,.r17-choice-grid{grid-template-columns:1fr}.r17-preview-column{border-left:0;border-top:1px solid #e5eaf0;padding-left:0;padding-top:18px}}

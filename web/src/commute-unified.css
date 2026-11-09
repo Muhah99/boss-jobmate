@@ -1,0 +1,25 @@
+/* 使用初始化现有地图配置卡片的视觉规则，仅作用于系统配置内本卡。 */
+.setup-page .commute-unified-card{padding:22px;gap:18px}
+.commute-unified-card .settings-card-head h2{font-size:15px;font-weight:700;color:#1d2939}
+.commute-unified-card .r21-commute-explanation{display:grid;gap:6px;color:#667085;font-size:11px;line-height:1.8}
+.commute-unified-card .r21-commute-explanation p{margin:0}
+.commute-unified-card .r21-commute-explanation strong{color:#344054;font-weight:600}
+.commute-unified-card .setup-map-help{border:1px solid #b2d7d1;border-radius:6px;background:#f1faf7;color:#344054}
+.commute-unified-card .setup-map-help>summary{display:grid;grid-template-columns:18px minmax(0,1fr) auto;align-items:center;gap:10px;min-height:48px;padding:12px 14px;list-style:none;cursor:pointer;color:#0f766e;border-radius:inherit}
+.commute-unified-card .setup-map-help>summary::-webkit-details-marker{display:none}
+.commute-unified-card .setup-map-help>summary::marker{content:''}
+.commute-unified-card .setup-map-help>summary>strong{min-width:0;font-size:13px;font-weight:700;line-height:1.65}
+.commute-unified-card .setup-map-help>summary>svg{flex:none}
+.commute-unified-card .setup-map-help>summary:hover{background:#e5f4ef}
+.commute-unified-card .setup-map-help>summary:focus-visible{outline:2px solid #0f766e;outline-offset:3px}
+.commute-unified-card .setup-map-help-action{display:flex;align-items:center;gap:6px;white-space:nowrap;font-size:11px;font-weight:600}
+.commute-unified-card .setup-map-help-open{display:none}
+.commute-unified-card .setup-map-help[open]>summary{border-radius:6px 6px 0 0}
+.commute-unified-card .setup-map-help[open] .setup-map-help-closed{display:none}
+.commute-unified-card .setup-map-help[open] .setup-map-help-open{display:inline}
+.commute-unified-card .setup-map-help[open] .setup-map-help-action>svg{transform:rotate(180deg)}
+.commute-unified-card .setup-map-help-content{padding:14px 18px 16px;border-top:1px solid #c9e4dc;font-size:12px;line-height:1.8}
+.commute-unified-card .setup-map-help-content ol{margin:0;padding-left:20px}
+.commute-unified-card .setup-map-help-content li+li{margin-top:7px}
+.commute-unified-card .setup-map-help-content p{margin:12px 0 0;color:#667085;font-size:11px}
+.commute-unified-card .setup-map-help-content a{color:#0f766e;font-weight:600;text-decoration:underline;text-underline-offset:3px}

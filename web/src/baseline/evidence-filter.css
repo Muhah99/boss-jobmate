@@ -1,0 +1,7 @@
+.evidence-keyword-filter { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; padding: 12px 0 18px; border-bottom: 1px solid #e3e9ed; }
+.evidence-keyword-filter strong { font-size: 13px; margin-right: 6px; }
+.evidence-keyword-filter button { border: 1px solid #bce9e8; border-radius: 6px; padding: 6px 10px; background: #effafa; color: #008e95; font: inherit; font-size: 12px; line-height: 1.5; white-space: normal; text-align: left; overflow-wrap: anywhere; cursor: pointer; }
+.evidence-keyword-filter button[aria-pressed="true"] { color: white; background: #009da5; border-color: #009da5; }
+.evidence-keyword-filter button:focus-visible { outline: 2px solid #006c74; outline-offset: 2px; }
+.evidence-filter-status { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; margin: 16px 0; font-size: 13px; }
+.evidence-filter-status button { border: 0; background: transparent; color: #008e95; text-decoration: underline; cursor: pointer; }

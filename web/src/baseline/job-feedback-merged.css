@@ -1,0 +1,94 @@
+.job-feedback-merged > .job-feedback-issue-experience { margin-top: 0; border-top: 0; padding-top: 0; }
+.job-feedback-merged-requirements { display: grid; gap: 10px; margin: 14px 0; }
+.job-feedback-merged-requirement { padding: 12px 14px; border: 1px solid #dce5ed; border-radius: 8px; }
+.job-feedback-merged-requirement > header { display: flex; align-items: center; gap: 8px; }
+.job-feedback-merged .job-feedback-merged-requirement h3 { margin: 8px 0; font-size: 15px; }
+.job-feedback-merged-suggestions { padding: 12px 14px; background: #f4f7fb; border-radius: 8px; }
+.job-feedback-merged-suggestions h4 { margin: 0 0 8px; }
+.job-feedback-merged-suggestions p { margin: 6px 0; white-space: pre-wrap; }
+
+.job-feedback-opinions { display: grid; gap: 0; }
+.job-feedback-opinion { border-top: 1px solid #e2e8f0; padding: 16px 0; min-width: 0; }
+.job-feedback-dialog .job-feedback-opinion > h3 { display: flex; align-items: center; gap: 8px; margin: 0 0 8px; color: #667085; font-size: 12px; font-weight: 400; }
+.job-feedback-opinion .job-feedback-issue-card { border: 0; padding: 0; }
+.job-feedback-opinion .job-feedback-merged-requirements { gap: 6px; margin: 6px 0 14px; padding-left: 12px; border-left: 1px solid #b9cfe3; }
+.job-feedback-opinion .job-feedback-merged-requirement { padding: 8px 12px; border: 0; border-radius: 4px; background: #f0f6fc; }
+.job-feedback-dialog .job-feedback-opinion .job-feedback-merged-requirement h3 { margin: 4px 0 0; font-size: 13px; line-height: 1.65; font-weight: 400; white-space: pre-wrap; overflow-wrap: anywhere; }
+.job-feedback-opinion .job-feedback-merged-requirement > small { font-size: 11px; color: #667085; }
+.job-feedback-opinion .job-feedback-issue-experience { margin: 0; padding: 10px 14px; border: 0; border-radius: 4px; background: #eaf8f5; }
+.job-feedback-dialog .job-feedback-opinion .job-feedback-issue-experience .job-feedback-fact { margin: 6px 0 0; font-size: 14px; line-height: 1.65; font-weight: 400; overflow-wrap: anywhere; }
+.job-feedback-opinion .job-feedback-issue-experience .job-feedback-tag { margin: 0; padding: 0; color: #667085; background: transparent; font-size: 12px; }
+.job-feedback-dialog .job-feedback-scope-label { margin: 0 0 6px; font-size: 12px; font-weight: 400; color: #667085; }
+.job-feedback-change-scope .job-feedback-change { margin: 8px 0 0; padding: 0 0 0 12px; border-top: 0; border-left: 1px solid #dce5ed; }
+.job-feedback-change-scope .job-feedback-change > header { margin-bottom: 6px; gap: 6px; }
+.job-feedback-change-scope .job-feedback-change h4,
+.job-feedback-change-scope .job-feedback-change h4 small,
+.job-feedback-change-scope .job-feedback-change .job-feedback-tag { font-size: 12px; font-weight: 400; color: #667085; }
+.job-feedback-change-scope .job-feedback-change .job-feedback-tag { margin: 0; padding: 0; background: transparent; }
+.job-feedback-change-scope .job-feedback-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 10px; }
+.job-feedback-change-scope .job-feedback-before,
+.job-feedback-change-scope .job-feedback-after { padding: 8px 12px; border: 0; border-radius: 4px; background: #f0f6fc; }
+.job-feedback-change-scope .job-feedback-before > strong,
+.job-feedback-change-scope .job-feedback-after > strong { margin-bottom: 5px; font-size: 12px; font-weight: 400; color: #667085; }
+.job-feedback-change-scope .job-feedback-before p,
+.job-feedback-change-scope .job-feedback-after p { margin: 0; }
+.job-feedback-dialog .job-feedback-change-scope textarea { min-height: 58px; padding: 6px 8px; field-sizing: content; resize: vertical; }
+.job-feedback-opinion-actions { display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 8px; margin: 12px 0 0; }
+.job-feedback-opinion-actions button { min-height: 32px; padding: 5px 18px; font-size: 12px; }
+.job-feedback-opinion > .job-feedback-field { margin: 16px 0 0; color: #667085; font-size: 12px; font-weight: 400; }
+.job-feedback-opinion > .job-feedback-field textarea { min-height: 80px; field-sizing: content; }
+.job-feedback-user-feedback { margin-bottom: 14px; padding: 10px 14px; border-radius: 4px; background: #f4f7fb; }
+.job-feedback-user-feedback > label,
+.job-feedback-user-feedback > span,
+.job-feedback-user-feedback > small { display: block; color: #667085; font-size: 12px; font-weight: 400; }
+.job-feedback-dialog .job-feedback-user-feedback p { margin: 6px 0 0; font-size: 14px; font-weight: 400; }
+.job-feedback-dialog { outline: none; }
+.job-feedback-dialog button:focus-visible { outline: 2px solid #0f766e; outline-offset: 2px; }
+.batch-feedback-dialog > .job-feedback-body { display: flex; flex-direction: column; padding: 0; overflow: hidden; }
+.batch-feedback-dialog .batch-feedback-layout { flex: 1; width: 100%; min-height: 0; grid-template-columns: minmax(0, 1fr) minmax(0, 3fr); gap: 0; align-items: stretch; }
+.batch-feedback-dialog .batch-feedback-layout > nav { display: block; position: static; min-height: 0; overflow: auto; border-right: 1px solid #dce5eb; }
+.batch-feedback-dialog .batch-feedback-layout > nav section { padding: 16px 20px; border: 0; border-bottom: 1px solid #dce5eb; border-radius: 0; }
+.batch-feedback-dialog .batch-feedback-layout > nav section.active { background: #eaf8f5; }
+.batch-feedback-dialog .batch-feedback-layout > nav button { padding: 0; overflow-wrap: anywhere; }
+.batch-feedback-dialog .batch-feedback-layout > nav strong { font-size: 16px; }
+.batch-feedback-dialog .batch-feedback-layout > nav span { font-size: 13px; }
+.batch-feedback-dialog .batch-feedback-layout > nav small { font-size: 12px; color: #667085; }
+.batch-feedback-dialog .batch-feedback-content { min-height: 0; overflow: auto; padding: 16px 22px; }
+.job-feedback-final { margin-top: 22px; padding-top: 18px; border-top: 2px solid #b9dcd3; }
+
+@media (max-width: 760px) {
+  .batch-feedback-dialog > .job-feedback-body { display: block; overflow: auto; }
+  .batch-feedback-dialog .batch-feedback-layout { grid-template-columns: minmax(0, 1fr); }
+  .batch-feedback-dialog .batch-feedback-layout > nav { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-right: 0; overflow: visible; }
+  .batch-feedback-dialog .batch-feedback-layout > nav section { padding: 12px; }
+  .batch-feedback-dialog .batch-feedback-content { padding: 14px; overflow: visible; }
+  .job-feedback-change-scope .job-feedback-grid { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+  .job-feedback-change-scope .job-feedback-time { grid-template-columns: minmax(0, 1fr); }
+}
+
+.feedback-summary-dialog { width: min(1220px, calc(100vw - 40px)); }
+.feedback-summary { display: grid; gap: 20px; }
+.feedback-summary-group { min-width: 0; }
+.job-feedback-dialog .feedback-summary-group > h3 { margin: 0; padding: 12px 18px; border-radius: 5px 5px 0 0; background: #e4f7f3; color: #145a61; font-size: 16px; line-height: 1.6; overflow-wrap: anywhere; }
+.feedback-summary table { width: 100%; border-collapse: collapse; table-layout: fixed; }
+.feedback-summary th { padding: 10px 16px; background: #f4f7fb; color: #63718a; font-weight: 400; font-size: 12px; text-align: left; }
+.feedback-summary th:nth-child(1) { width: 21%; }
+.feedback-summary th:nth-child(2) { width: 26%; }
+.feedback-summary th:nth-child(3) { width: 39%; }
+.feedback-summary th:nth-child(4) { width: 14%; }
+.feedback-summary td { padding: 16px; vertical-align: top; border-bottom: 1px solid #e0e7ef; border-right: 1px solid #edf1f6; font-size: 14px; line-height: 1.65; overflow-wrap: anywhere; }
+.feedback-summary td:last-child { border-right: 0; }
+.job-feedback-dialog .feedback-summary p { margin: 4px 0; white-space: pre-wrap; }
+.feedback-summary-field + .feedback-summary-field { margin-top: 12px; }
+.feedback-summary-field > small, .feedback-summary-supplement > small { color: #6d7890; font-size: 12px; }
+.feedback-summary-supplement { margin-top: 10px; padding: 8px 12px; background: #f4f7fb; border-radius: 4px; }
+.feedback-summary-decision { display: inline-block; padding: 3px 16px; border-radius: 18px; white-space: nowrap; background: #e6eaf0; color: #576580; }
+.feedback-summary-decision.accept { background: #00949b; color: white; }
+.feedback-summary-decision.modify { background: #ffdfac; color: #a35a08; }
+.feedback-summary-dialog footer > small { max-width: 65%; line-height: 1.7; }
+@media (max-width: 760px) {
+  .feedback-summary-group { overflow-x: auto; }
+  .feedback-summary table { min-width: 680px; }
+  .feedback-summary-dialog footer { align-items: stretch; flex-direction: column; }
+  .feedback-summary-dialog footer > small { max-width: none; }
+}
